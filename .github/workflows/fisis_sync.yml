@@ -1,0 +1,50 @@
+name: FISIS 분기 데이터 갱신
+
+on:
+  schedule:
+    # 분기 업무보고서가 FISIS에 반영되는 시점이 분기별로 들쭉날쭉하므로
+    # 매달 1일·15일에 확인만 하고, 실제 변경이 있을 때만 커밋한다.
+    - cron: '0 18 1,15 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fisis-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # update_data.py 는 표준 라이브러리만 사용하므로 pip install 이 필요 없습니다.
+      - name: FISIS 수집 및 지표 계산
+        env:
+          FISIS_API_KEY: ${{ secrets.FISIS_API_KEY }}
+        run: python scripts/update_data.py
+
+      - name: 내장 스냅숏 갱신
+        run: python scripts/embed_seed.py
+
+      - name: 변경사항 커밋
+        id: commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/fisis_data.json index.html
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋을 건너뜁니다."
+            echo "- 결과: **변경 없음**" >> "$GITHUB_STEP_SUMMARY"
+          else
+            Q=$(python -c "import json;print(json.load(open('data/fisis_data.json'))['meta']['latest_quarter'])")
+            git commit -m "chore: FISIS 데이터 갱신 ($Q 기준)"
+            git push
+            echo "- 결과: **$Q 기준으로 갱신 및 배포**" >> "$GITHUB_STEP_SUMMARY"
+          fi
