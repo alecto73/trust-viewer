@@ -21,6 +21,9 @@ import time
 import urllib.parse
 import urllib.request
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
+KST = ZoneInfo("Asia/Seoul")
 
 AUTH = os.environ.get("FISIS_API_KEY", "").strip()
 BASE = "https://fisis.fss.or.kr/openapi/"
@@ -383,7 +386,7 @@ def main():
     payload = {
         "meta": {
             "source": "금융감독원 금융통계정보시스템(FISIS) 오픈API",
-            "generated_at": datetime.now().isoformat(timespec="seconds"),
+            "generated_at": datetime.now(KST).replace(tzinfo=None).isoformat(timespec="seconds"),
             "unit": "금액=억원, 비율=%",
             "basis": "고유계정 기준 (신탁계정 별도)",
             "tables": [TB_BS, TB_PL, TB_NCR, TB_NPL, TB_CLASS],
@@ -398,6 +401,23 @@ def main():
     }
 
     guard(payload)
+
+    # 수집 시각(generated_at)만 다르고 수치가 같으면 파일을 그대로 둔다.
+    # 이렇게 해야 워크플로의 git diff 검사가 "변경 없음"을 인식해 빈 커밋·재배포가 생기지 않는다.
+    if os.path.exists(OUT_PATH):
+        try:
+            with open(OUT_PATH, encoding="utf-8") as fp:
+                prev = json.load(fp)
+        except Exception:      # noqa: BLE001
+            prev = None
+
+        def strip(d):
+            meta = {k: v for k, v in (d.get("meta") or {}).items() if k != "generated_at"}
+            return {**d, "meta": meta}
+
+        if prev is not None and strip(prev) == strip(payload):
+            print(f"\n변경 없음: 수치가 기존 파일과 같아 {OUT_PATH} 를 유지합니다.")
+            return
 
     os.makedirs(os.path.dirname(OUT_PATH) or ".", exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as fp:
