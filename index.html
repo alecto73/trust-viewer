@@ -354,7 +354,7 @@ function boot(){
   const nxt = lq===4 ? `${ly+1}Q1` : `${ly}Q${lq+1}`;
   $('#stamp').innerHTML=`<b>데이터</b> ${origin} · 최신 ${D.quarters.at(-1)} · 수집 시각 `
     + `${(D.meta?.generated_at||'').replace('T',' ')}<br>`
-    + `<b>갱신</b> GitHub Actions가 매달 1일·15일에 FISIS를 확인해 새 분기가 올라오면 자동 반영합니다. `
+    + `<b>갱신</b> GitHub Actions가 매주 월요일 새벽(05:00)에 FISIS를 확인해 새 분기가 올라오면 자동 반영합니다. `
     + `다음 대상은 ${nxt}이며, 업무보고서 반영 시점에 따라 분기말 후 2~3개월 뒤 나타납니다.`;
   renderLadder(); renderTable();
 }
