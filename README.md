@@ -7,7 +7,7 @@
 스크립트 하나와 HTML 파일 하나가 전부입니다.
 
 ```
-GitHub Actions (매달 1일·15일 확인 / 수동 실행)
+GitHub Actions (매주 월요일 05:00 KST 확인 / 수동 실행)
       │  python scripts/update_data.py
       ▼
 FISIS 오픈API  ──▶  data/fisis_data.json  ──▶  scripts/embed_seed.py ──▶ index.html
@@ -109,10 +109,11 @@ TTM 계산에 앞선 3개 분기가 필요하므로, 수집은 표시 구간(8�
 밀리므로 손댈 일이 없고, FISIS의 40분기 제한에도 걸리지 않습니다. 특정 구간을 강제하려면
 `FISIS_START_MM` / `FISIS_END_MM` 환경변수로 덮어쓸 수 있습니다.
 
-**매달 확인, 변경 시에만 커밋.** 분기 업무보고서가 FISIS에 실리는 시점은 분기마다
+**매주 확인, 변경 시에만 커밋.** 분기 업무보고서가 FISIS에 실리는 시점은 분기마다
 차이가 있어 "분기 1회 실행"은 한 번 놓치면 3개월을 기다려야 합니다. 그래서 워크플로는
-매달 1일·15일에 확인만 하고, `git diff --staged --quiet` 로 실제 변경이 있을 때만
-커밋합니다. 변경이 없으면 Netlify 재배포도 일어나지 않습니다.
+매주 월요일 05:00(KST, cron `0 20 * * 0` = UTC 일요일 20:00)에 확인만 합니다.
+`update_data.py` 는 수집 시각(`generated_at`)을 뺀 내용이 기존 파일과 같으면 파일을 다시 쓰지 않고,
+워크플로는 `git diff --staged --quiet` 로 실제 변경이 있을 때만 커밋합니다. 변경이 없으면 Netlify 재배포도 일어나지 않습니다.
 
 **미완성 분기 제외.** 새 분기가 열릴 때 일부 회사만 먼저 올라오는 구간이 생깁니다.
 자산총계가 채워진 회사가 과반이 안 되는 분기는 아직 미완성으로 보고 표시 대상에서
@@ -252,7 +253,7 @@ python -m http.server 8000   # → http://localhost:8000
 
 ```
 .
-├── .github/workflows/fisis_sync.yml   매달 1일·15일 확인, 변경 시에만 커밋
+├── .github/workflows/fisis_sync.yml   매주 월요일 확인, 변경 시에만 커밋
 ├── scripts/
 │   ├── update_data.py                 FISIS 수집 + 지표 계산 + 후퇴 방지 가드
 │   ├── embed_seed.py                  JSON을 index.html 에 내장
