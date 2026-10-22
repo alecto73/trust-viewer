@@ -35,8 +35,8 @@ HEADERS = {
     "Referer": "https://fisis.fss.or.kr/page/api-test.jsp",
 }
 
-KEEP_QUARTERS = int(os.environ.get("FISIS_KEEP_QUARTERS", "8"))
-# 표시할 8분기 + ROE/ROA의 4분기 롤링에 필요한 앞선 3분기 + 공시 지연 여유 2분기
+KEEP_QUARTERS = int(os.environ.get("FISIS_KEEP_QUARTERS", "12"))
+# 표시할 12분기 + ROE/ROA의 4분기 롤링에 필요한 앞선 3분기 + 공시 지연 여유 2분기
 FETCH_QUARTERS = KEEP_QUARTERS + 5
 
 
@@ -135,7 +135,7 @@ def to_float(value):
 
 
 def fetch_table(finance_cd, list_no, field_map):
-    """통계표 1개를 8분기 통째로 받아 {base_month: {field: value}} 로 정리."""
+    """통계표 1개를 조회 구간 통째로 받아 {base_month: {field: value}} 로 정리."""
     result = call(
         "statisticsInfoSearch",
         financeCd=finance_cd,
