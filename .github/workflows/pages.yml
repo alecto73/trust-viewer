@@ -39,6 +39,8 @@ jobs:
           mkdir -p _site/data
           cp index.html _site/
           cp data/fisis_data.json _site/data/
+          cp manifest.webmanifest _site/
+          cp -r icons _site/
 
       - uses: actions/configure-pages@v5
 
