@@ -15,7 +15,7 @@ FISIS 오픈API  ──▶  data/fisis_data.json  ──▶  scripts/embed_seed.
       └────────────────── git commit & push ─────────────────────────────────┘
                                     │
                                     ▼
-                        Netlify 자동 빌드 → CDN 배포
+              GitHub Actions(pages.yml) → GitHub Pages 배포
 ```
 
 ---
@@ -113,7 +113,7 @@ TTM 계산에 앞선 3개 분기가 필요하므로, 수집은 표시 구간(12�
 차이가 있어 "분기 1회 실행"은 한 번 놓치면 3개월을 기다려야 합니다. 그래서 워크플로는
 매주 월요일 05:00(KST, cron `0 20 * * 0` = UTC 일요일 20:00)에 확인만 합니다.
 `update_data.py` 는 수집 시각(`generated_at`)을 뺀 내용이 기존 파일과 같으면 파일을 다시 쓰지 않고,
-워크플로는 `git diff --staged --quiet` 로 실제 변경이 있을 때만 커밋합니다. 변경이 없으면 Netlify 재배포도 일어나지 않습니다.
+워크플로는 `git diff --staged --quiet` 로 실제 변경이 있을 때만 커밋합니다. 변경이 없으면 데이터 커밋도 생기지 않습니다.
 
 **미완성 분기 제외.** 새 분기가 열릴 때 일부 회사만 먼저 올라오는 구간이 생깁니다.
 자산총계가 채워진 회사가 과반이 안 되는 분기는 아직 미완성으로 보고 표시 대상에서
@@ -225,13 +225,15 @@ python -m http.server 8000   # → http://localhost:8000
 
 ### 배포
 
-1. GitHub에 비공개 저장소를 만들고 푸시합니다.
+1. GitHub에 공개 저장소를 만들고 푸시합니다(무료 계정의 GitHub Pages는 공개 저장소에서만 쓸 수 있습니다).
 2. 저장소 `Settings → Secrets and variables → Actions` 에 `FISIS_API_KEY` 를 등록합니다.
-3. Netlify에서 `Add new site → Import an existing project` 로 저장소를 연결합니다.
-   빌드 명령은 비워두고 publish 디렉터리는 `.` 입니다(`netlify.toml`에 이미 있습니다).
+3. `Settings → Pages → Build and deployment → Source` 를 **GitHub Actions** 로 지정합니다.
+   배포는 `.github/workflows/pages.yml` 이 `index.html` 과 `data/fisis_data.json` 만 모아 올립니다.
 4. `Actions` 탭에서 `FISIS 분기 데이터 갱신` 을 한 번 수동 실행해 동작을 확인합니다.
 
-이후에는 분기마다 워크플로가 자동으로 돌고, 커밋이 올라가면 Netlify가 감지해 재배포합니다.
+이후에는 매주 데이터 갱신 워크플로가 돌고, 그 실행이 성공하면 `pages.yml` 이 이어서 돌아 GitHub Pages에
+재배포합니다(`workflow_run` 트리거). 사람이 직접 푸시한 커밋도 바로 배포됩니다.
+사이트 주소는 `https://alecto73.github.io/trust-viewer/` 입니다.
 
 ---
 
@@ -260,13 +262,13 @@ python -m http.server 8000   # → http://localhost:8000
 ```
 .
 ├── .github/workflows/fisis_sync.yml   매주 월요일 확인, 변경 시에만 커밋
+├── .github/workflows/pages.yml        GitHub Pages 배포
 ├── scripts/
 │   ├── update_data.py                 FISIS 수집 + 지표 계산 + 후퇴 방지 가드
 │   ├── embed_seed.py                  JSON을 index.html 에 내장
 │   └── discover.py                    회사·통계표·계정 코드 탐색기
 ├── data/fisis_data.json               수집 결과 (14개사 × 12분기)
-├── index.html                         대시보드 (단일 파일)
-└── netlify.toml                       배포 설정
+└── index.html                         대시보드 (단일 파일)
 ```
 
 데이터 출처는 금융감독원 금융통계정보시스템(FISIS)입니다. FISIS 수록 통계는 국가승인통계가
