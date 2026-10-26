@@ -1,0 +1,31 @@
+{
+  "name": "부동산 신탁사 재무건전성 지표",
+  "short_name": "신탁 재무지표",
+  "description": "FISIS 기준 부동산신탁사 재무건전성 지표 조회",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e7ecf0",
+  "theme_color": "#e7ecf0",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
