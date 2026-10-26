@@ -1,0 +1,51 @@
+name: GitHub Pages 배포
+
+on:
+  # 사람이 직접 푸시한 커밋은 바로 배포
+  push:
+    branches: [main]
+  # 데이터 갱신 워크플로의 커밋은 GITHUB_TOKEN 으로 푸시되어 push 트리거가 걸리지 않으므로,
+  # 그 워크플로가 끝난 뒤 이어서 배포한다.
+  workflow_run:
+    workflows: ["FISIS 분기 데이터 갱신"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    # 데이터 갱신이 실패했으면 배포하지 않는다
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      # 사이트에 필요한 파일만 모은다 (스크립트·워크플로는 올리지 않음)
+      - name: 배포 파일 모으기
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/fisis_data.json _site/data/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: GitHub Pages 배포
+        id: deploy
+        uses: actions/deploy-pages@v4
