@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>부동산 신탁사 재무건전성 지표</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#e7ecf0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="신탁 재무지표">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 :root{
@@ -317,11 +324,11 @@ const CARDS=[
   {k:'debt_ratio', t:'부채비율', kind:'ratio',
     lines:Q=>{ const a=average('debt_ratio',Q); return [['부채총계',won(a?.nu)],['자기자본',won(a?.de)]]; }},
   {k:'trust_account_loan', t:'신탁계정대 잔액', kind:'amount', f:'trust_account_loan',
-    lines:Q=>{ const a=average('tal_to_equity',Q); return [['자기자본 대비(합산)',a?fmt(a.v,'%'):'–']]; }},
+    lines:Q=>{ const a=average('allowance_coverage',Q); return [['충당금 적립액',won(a?.nu)],['충당금 적립률(합산)',a?fmt(a.v,'%'):'–']]; }},
+  {k:'tal_to_equity', t:'신탁계정대/자기자본', kind:'ratio',
+    lines:Q=>{ const a=average('tal_to_equity',Q); return [['신탁계정대',won(a?.nu)],['자기자본',won(a?.de)]]; }},
   {k:'tal_substandard_ratio', t:'신탁계정대 고정이하비율', kind:'ratio',
     lines:Q=>{ const a=average('tal_substandard_ratio',Q); return [['고정이하',won(a?.nu)],['분류대상',won(a?.de)]]; }},
-  {k:'allowance_coverage', t:'신탁계정대 충당금', kind:'amount', f:'allowance_tal',
-    lines:Q=>{ const a=average('allowance_coverage',Q); return [['적립률(합산)',a?fmt(a.v,'%'):'–']]; }},
   {k:'net_income', t:'당기순이익 (분기)', kind:'amount', f:'net_income', signed:true,
     lines:Q=>{ const t=total('net_income_ttm',Q); const loss=D.companies.filter(c=>{const v=val(c.code,'net_income',Q);return v!=null&&v<0}).length;
       return [['4분기 롤링 합계',won(t?.sum)],['적자',`${loss}개사`]]; }},
