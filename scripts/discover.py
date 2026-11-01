@@ -88,9 +88,10 @@ def main():
 
     elif cmd == "peek":
         finance_cd, list_no, base_mm = args[1], args[2], args[3]
+        term = args[4] if len(args) > 4 else "Q"     # Q=분기, H=반기, Y=연
         result = call(
             "statisticsInfoSearch",
-            financeCd=finance_cd, listNo=list_no, term="Q",
+            financeCd=finance_cd, listNo=list_no, term=term,
             startBaseMm=base_mm, endBaseMm=base_mm,
         )
         print("컬럼:", json.dumps(result.get("description"), ensure_ascii=False))
