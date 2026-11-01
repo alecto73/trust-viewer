@@ -77,6 +77,12 @@ button:hover{background:#f4f7f9}
 .cd{font-size:11.5px;color:var(--ink3);margin-top:5px}
 .cd.up{color:var(--alert)}.cd.dn{color:var(--safe)}
 .cv,.cv2{white-space:nowrap}
+.cspark{display:block;width:100%;height:36px;margin-top:9px;overflow:visible}
+.cspark .ln{fill:none;stroke-width:1.8;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.cspark .ar{opacity:.13}
+.cspark .zr{stroke:var(--ink3);stroke-width:1;stroke-dasharray:3 3;vector-effect:non-scaling-stroke;opacity:.6}
+.cspark .cur{stroke:var(--ink);stroke-width:1;stroke-dasharray:2 2;vector-effect:non-scaling-stroke;opacity:.55}
+.csl{display:flex;justify-content:space-between;font-size:10px;color:var(--ink3);margin-top:2px}
 
 /* ── 지표 선택 ── */
 .metrics{display:flex;gap:6px;overflow-x:auto;padding:14px 0 12px;scrollbar-width:thin}
@@ -159,6 +165,7 @@ footer b{color:var(--ink2);font-weight:600}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .card{padding:12px 11px 10px 15px}
   .cv{font-size:19px}
+  .csl span:nth-child(2){display:none}
   .row{grid-template-columns:1fr 74px 52px;grid-template-areas:"n v d" "t t t" "c c c";gap:5px 8px;padding:9px 13px}
   .rname{grid-area:n}.rval{grid-area:v}.rdel{grid-area:d}.track{grid-area:t}
   .comp{grid-area:c;flex-direction:row;justify-content:flex-start;gap:12px}
@@ -364,6 +371,24 @@ const CARDS=[
   {k:'trust_share', t:'수탁고', kind:'amount', f:'trust_assets',
     lines:Q=>{ const a=average('trust_share',Q); return [['평균 점유율',a?fmt(a.v,'%'):'–']]; }},
 ];
+function cardSpark(vals,g){
+  // 업계 합산(비율)·합계(금액)의 분기별 추이. 점선 세로줄은 선택한 기준분기
+  const pts=vals.map((v,i)=>[i,v]).filter(p=>p[1]!=null);
+  if(pts.length<2) return '';
+  const ys=pts.map(p=>p[1]); let lo=Math.min(...ys), hi=Math.max(...ys);
+  if(lo===hi){ lo-=1; hi+=1; }
+  const W=200, H=36, P=3, n=vals.length;
+  const X=i=>(i/(n-1)*W).toFixed(1), Y=v=>(P+(hi-v)/(hi-lo)*(H-2*P)).toFixed(1);
+  const d=pts.map((p,k)=>(k?'L':'M')+X(p[0])+' '+Y(p[1])).join(' ');
+  const area=d+` L${X(pts[pts.length-1][0])} ${H} L${X(pts[0][0])} ${H} Z`;
+  const c={s:'var(--safe)',w:'var(--watch)',a:'var(--alert)'}[g]||'var(--ink2)';
+  const qi=D.quarters.indexOf(q);
+  const zero=(lo<0&&hi>0)?`<line class="zr" x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}"/>`:'';
+  return `<svg class="cspark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">${zero}
+    <path class="ar" d="${area}" fill="${c}"/><path class="ln" d="${d}" stroke="${c}"/>
+    ${qi>=0?`<line class="cur" x1="${X(qi)}" x2="${X(qi)}" y1="0" y2="${H}"/>`:''}</svg>
+    <span class="csl"><span>${D.quarters[0]}</span><span>${n}개 분기 추이</span><span>${D.quarters[n-1]}</span></span>`;
+}
 function cardMain(cd,Q){
   if(cd.kind==='ratio'){ const a=average(cd.k,Q); return a?a.v:null; }
   const t=total(cd.f,Q); return t?t.sum:null;
@@ -394,7 +419,7 @@ function renderCards(){
     }
     const lines=cd.lines(q).map(([a,b])=>`<span class="cl"><span>${a}</span><b>${b}</b></span>`).join('');
     return `<button class="card" type="button" data-k="${cd.k}" data-g="${g}" aria-pressed="${cd.k===mk}">
-      <span class="ct">${cd.t}</span>${top}${del}<span class="cbody">${cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':''}${lines}</span></button>`;
+      <span class="ct">${cd.t}</span>${top}${del}${cardSpark(D.quarters.map(Q=>cardMain(cd,Q)),g)}<span class="cbody">${cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':''}${lines}</span></button>`;
   }).join('');
   $('#cards').querySelectorAll('.card').forEach(b=>b.onclick=()=>{
     selectMetric(b.dataset.k);
