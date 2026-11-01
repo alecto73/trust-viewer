@@ -54,11 +54,15 @@ def main():
             print(f'{row["finance_cd"]}  {row["finance_nm"]}{mark}')
 
     elif cmd == "tables":
-        for sml, nm in (("A", "일반현황"), ("B", "재무현황"), ("E", "주요경영지표")):
-            print(f"\n[{nm}]  lrgDiv=M smlDiv={sml}")
-            for row in call("statisticsListSearch", lrgDiv="M", smlDiv=sml).get("list") or []:
+        groups = (
+            ("M", "A", "부동산신탁 일반현황"), ("M", "B", "부동산신탁 재무현황"),
+            ("M", "E", "부동산신탁 주요경영지표"),
+            ("B", "E", "공통(신탁) 부동산신탁 — 수탁고 등 신탁계정"), ("B", "F", "공통(신탁) 신탁보수"),
+        )
+        for lrg, sml, nm in groups:
+            print(f"\n[{nm}]  lrgDiv={lrg} smlDiv={sml}")
+            for row in call("statisticsListSearch", lrgDiv=lrg, smlDiv=sml).get("list") or []:
                 print(f'  {row["list_no"]}  {row["list_nm"]}')
-        print("\n※ 신탁계정 통계는 공통(신탁) 권역: lrgDiv=B, smlDiv=E(부동산신탁)/F(신탁보수)")
 
     elif cmd == "accounts":
         list_no = args[1]
