@@ -48,7 +48,8 @@ button:hover{background:#f4f7f9}
 .sumhd{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;justify-content:space-between;margin:16px 0 8px}
 .sumhd h2{font-size:15px;font-weight:650;letter-spacing:-.01em}
 .sumhd .note{font-size:11.5px;color:var(--ink3)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .card{display:flex;flex-direction:column;align-items:stretch;gap:1px;text-align:left;
   background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px 11px;cursor:pointer}
 .card:hover{background:var(--surface);border-color:var(--ink3)}
@@ -66,6 +67,15 @@ button:hover{background:#f4f7f9}
 .cbody{display:flex;flex-direction:column;border-top:1px solid var(--rule2);margin-top:7px;padding-top:6px}
 .cd{font-size:11.5px;color:var(--ink3);margin-top:5px}
 .cd.up{color:var(--alert)}.cd.dn{color:var(--safe)}
+.ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.cmain{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+.cv,.cv2{white-space:nowrap}
+.donut{flex:none;width:78px;height:78px;margin-top:2px}
+.donut text{font-family:inherit;font-variant-numeric:tabular-nums}
+.cl i,.clg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:0}
+.clg{display:grid;grid-template-columns:1fr 1fr;gap:1px 10px;margin-top:3px}
+.clg span{font-size:11px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.clg b{font-weight:600;color:var(--ink2);margin-left:3px}
 
 /* ── 지표 선택 ── */
 .metrics{display:flex;gap:6px;overflow-x:auto;padding:14px 0 12px;scrollbar-width:thin}
@@ -147,7 +157,10 @@ footer b{color:var(--ink2);font-weight:600}
   .wrap{padding:0 13px}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .card{padding:10px 11px 9px}
-  .cv{font-size:19px}
+  .cv{font-size:18px}
+  .cv .k,.cv2 .k{display:block;margin-left:0}
+  .donut{width:54px;height:54px}
+  .clg{grid-template-columns:1fr}
   .row{grid-template-columns:1fr 74px 52px;grid-template-areas:"n v d" "t t t" "c c c";gap:5px 8px;padding:9px 13px}
   .rname{grid-area:n}.rval{grid-area:v}.rdel{grid-area:d}.track{grid-area:t}
   .comp{grid-area:c;flex-direction:row;justify-content:flex-start;gap:12px}
@@ -217,8 +230,8 @@ footer b{color:var(--ink2);font-weight:600}
   </section>
 
   <footer>
-    <p><b>출처</b> 금융감독원 금융통계정보시스템(FISIS) 오픈API · 통계표 SM005(요약재무상태표) · SM007(요약손익계산서) · SM009(영업용순자본비율) · SM013(고정이하자산비율) · SM016(자산건전성 분류)</p>
-    <p><b>기준</b> 고유계정 기준이며 신탁계정과 분리됩니다. 금액은 억원, 비율은 %입니다. 손익 항목은 FISIS가 분기 단독 발생액으로 제공합니다. '당기순이익'은 해당 분기 단독 순이익이고, ROE와 '순이익 (4분기 롤링)'은 최근 4개 분기 합계(TTM)로 계산했습니다.</p>
+    <p><b>출처</b> 금융감독원 금융통계정보시스템(FISIS) 오픈API · 통계표 SM005(요약재무상태표) · SM007(요약손익계산서) · SM009(영업용순자본비율) · SM013(고정이하자산비율) · SM016(자산건전성 분류) · SM006(요약재무상태표 신탁계정, 수탁고)</p>
+    <p><b>기준</b> 고유계정 기준이며 신탁계정과 분리됩니다. 금액은 억원, 비율은 %입니다. 손익 항목은 FISIS가 분기 단독 발생액으로 제공합니다. '당기순이익'은 해당 분기 단독 순이익이고, ROE와 '순이익 (4분기 롤링)'은 최근 4개 분기 합계(TTM)로 계산했습니다. 수탁고는 신탁계정 자산총계이며, 점유율은 전 신탁사 수탁고 합계 대비 각 사 비중입니다.</p>
     <p><b>읽을 때 주의</b> NCR은 분모가 총위험액이라 회사 규모에 따라 값의 자릿수가 크게 달라집니다. 4,000%와 300%의 차이를 안전성 차이로 직접 해석하지 마시고, 규제선 150% 대비 여유와 추세 방향으로 보십시오. 양호·주의·경계 구간은 NCR 150%를 제외하면 규제 기준이 아니라 이 화면에서 정한 참고 기준입니다.</p>
     <p><b>업계 평균</b> 비율 지표는 회사별 비율을 다시 평균하지 않고 전 신탁사 분자 합계를 분모 합계로 나눈 합산 기준으로 계산합니다. 회사 규모 차이가 큰 업권이라 단순 평균은 소형사 극단값에 끌려가기 때문입니다. 금액 지표는 전 신탁사 합계와 산술평균을 함께 표시합니다.</p>
     <p id="stamp"></p>
@@ -237,6 +250,8 @@ const METRICS=[
  {k:'roe_ttm',       n:'ROE (4분기 롤링)',      u:'%',  dir:'up',   cap:15,   min:-40, thr:0,  band:[0,-10], agg:['net_income_ttm','total_equity'],    note:'최근 4개 분기 순이익 합계를 기말 자기자본으로 나눈 값입니다.'},
  {k:'net_income_ttm',n:'순이익 (4분기 롤링)',   u:'억', dir:'up',   cap:600,  min:-1200, thr:0,  band:[0,-500],   note:'최근 4개 분기 순이익 합계입니다.'},
  {k:'trust_account_loan',n:'신탁계정대 잔액',   u:'억', dir:'down', cap:13000},
+ {k:'trust_share',   n:'수탁고 점유율',         u:'%',  comp:['trust_assets'], note:'전 신탁사 수탁고(신탁계정 자산총계) 합계 중 각 사 비중입니다.'},
+ {k:'trust_assets',  n:'수탁고',                u:'억', note:'신탁계정 자산총계(FISIS SM006)입니다.'},
  {k:'total_assets',  n:'총자산',                u:'억'},
  {k:'total_equity',  n:'자기자본',              u:'억'},
  {k:'capital_stock', n:'자본금',                u:'억'},
@@ -246,6 +261,7 @@ const METRICS=[
 ];
 // 비율 지표의 분자·분모 금액 항목 이름
 const FIELD={
+  trust_assets:'수탁고',
   net_operating_capital:'영업용순자본', total_risk:'총위험액',
   trust_account_loan:'신탁계정대', total_equity:'자기자본',
   allowance_tal:'충당금 적립액', tal_substandard_below:'고정이하 금액', tal_classified_total:'분류대상 신탁계정대',
@@ -255,7 +271,7 @@ const FIELD={
   trust_fee:'신탁보수', operating_revenue:'영업수익',
 };
 const TCOLS=['ncr','tal_to_equity','allowance_coverage','tal_substandard_ratio','substandard_below_ratio',
-             'trust_account_loan','total_assets','total_equity','debt_ratio','net_borrow_dependency','roe_ttm','net_income','net_income_ttm'];
+             'trust_account_loan','trust_assets','trust_share','total_assets','total_equity','debt_ratio','net_borrow_dependency','roe_ttm','net_income','net_income_ttm'];
 
 let D=null, mk='ncr', q=null, sort={k:'ncr',asc:true}, open=null, origin='내장 스냅숏';
 const $=s=>document.querySelector(s), M=k=>METRICS.find(m=>m.k===k);
@@ -317,21 +333,69 @@ function sparkline(vals,cls){
 }
 
 /* ── 업계 요약 카드 ── */
+// 연한 파스텔 팔레트 (도넛 전용)
+const PASTEL=['#9fd8cc','#f8c9a3','#c9c0ee','#f4b9c7','#b3d4ef','#efdf9c'], PGRAY='#dfe5ea';
+const short=nm=>nm.replace(/\(주\)|주식회사/g,'').replace(/(자산|부동산)?신탁$/,'').trim();
+function shares(field,Q,top=4){
+  // 회사별 구성: 상위 top개사 + 기타
+  const rows=D.companies.map(c=>({n:short(c.name),v:val(c.code,field,Q)})).filter(r=>r.v!=null&&r.v>0)
+    .sort((a,b)=>b.v-a.v);
+  const tot=rows.reduce((a,r)=>a+r.v,0); if(!tot) return [];
+  const seg=rows.slice(0,top).map((r,i)=>({label:r.n,value:r.v,pct:r.v/tot*100,color:PASTEL[i]}));
+  const rest=rows.slice(top).reduce((a,r)=>a+r.v,0);
+  if(rest>0) seg.push({label:'기타',value:rest,pct:rest/tot*100,color:PGRAY});
+  return seg;
+}
+function pair(k,Q,c1,c2){
+  // 비율 지표: 분자·분모 금액 구성
+  const a=average(k,Q), m=M(k); if(!a) return [];
+  const t=Math.abs(a.nu)+Math.abs(a.de);
+  return [{label:FIELD[m.agg[0]],value:a.nu,pct:Math.abs(a.nu)/t*100,color:c1},
+          {label:FIELD[m.agg[1]],value:a.de,pct:Math.abs(a.de)/t*100,color:c2}];
+}
+function donut(seg,center,sub){
+  const R=30, C=2*Math.PI*R; let off=0;
+  const arcs=seg.map(s=>{
+    const len=Math.max(0,s.pct)/100*C;
+    const el=`<circle cx="39" cy="39" r="${R}" fill="none" stroke="${s.color}" stroke-width="13"
+      stroke-dasharray="${len.toFixed(2)} ${(C-len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}"
+      transform="rotate(-90 39 39)"/>`;
+    off+=len; return el;
+  }).join('');
+  return `<svg class="donut" viewBox="0 0 78 78" aria-hidden="true">
+    <circle cx="39" cy="39" r="${R}" fill="none" stroke="${PGRAY}" stroke-width="13"/>${arcs}
+    <text x="39" y="${sub?38:43}" text-anchor="middle" font-size="${center.length>5?11:12.5}" font-weight="700" fill="#16202b">${center}</text>
+    ${sub?`<text x="39" y="51" text-anchor="middle" font-size="9" fill="#7d8b98">${sub}</text>`:''}</svg>`;
+}
+const big=v=>v==null?'–':(Math.abs(v)>=10000?(v/10000).toFixed(1)+'조':won(v));
+const dot=c=>`<i style="background:${c}"></i>`;
+const legend=seg=>`<span class="clg">${seg.map(x=>`<span>${dot(x.color)}${x.label}<b>${x.pct.toFixed(0)}%</b></span>`).join('')}</span>`;
+
 const CARDS=[
   {k:'ncr', t:'영업용순자본비율', kind:'ratio',
-    lines:Q=>{ const a=average('ncr',Q); const low=D.companies.filter(c=>{const v=val(c.code,'ncr',Q);return v!=null&&v<150}).length;
-      return [['영업용순자본',won(a?.nu)],['총위험액',won(a?.de)],['150% 미달',`${low}개사`]]; }},
+    seg:Q=>pair('ncr',Q,PASTEL[0],PASTEL[1]),
+    body:(Q,seg)=>{ const low=D.companies.filter(c=>{const v=val(c.code,'ncr',Q);return v!=null&&v<150}).length;
+      return [[dot(seg[0]?.color)+'영업용순자본',won(seg[0]?.value)],[dot(seg[1]?.color)+'총위험액',won(seg[1]?.value)],['150% 미달',`${low}개사`]]; }},
   {k:'debt_ratio', t:'부채비율', kind:'ratio',
-    lines:Q=>{ const a=average('debt_ratio',Q); return [['부채총계',won(a?.nu)],['자기자본',won(a?.de)]]; }},
-  {k:'trust_account_loan', t:'신탁계정대 잔액', kind:'amount', f:'trust_account_loan',
-    lines:Q=>{ const a=average('allowance_coverage',Q); return [['충당금 적립액',won(a?.nu)],['충당금 적립률(합산)',a?fmt(a.v,'%'):'–']]; }},
+    seg:Q=>pair('debt_ratio',Q,PASTEL[3],PASTEL[4]),
+    body:(Q,seg)=>[[dot(seg[0]?.color)+'부채총계',won(seg[0]?.value)],[dot(seg[1]?.color)+'자기자본',won(seg[1]?.value)]]},
+  {k:'trust_account_loan', t:'신탁계정대 잔액', kind:'amount', f:'trust_account_loan', comp:true,
+    seg:Q=>shares('trust_account_loan',Q),
+    body:Q=>{ const a=average('tal_substandard_ratio',Q); return [['고정이하비율(합산)',a?fmt(a.v,'%'):'–']]; }},
   {k:'tal_to_equity', t:'신탁계정대/자기자본', kind:'ratio',
-    lines:Q=>{ const a=average('tal_to_equity',Q); return [['신탁계정대',won(a?.nu)],['자기자본',won(a?.de)]]; }},
-  {k:'tal_substandard_ratio', t:'신탁계정대 고정이하비율', kind:'ratio',
-    lines:Q=>{ const a=average('tal_substandard_ratio',Q); return [['고정이하',won(a?.nu)],['분류대상',won(a?.de)]]; }},
+    seg:Q=>pair('tal_to_equity',Q,PASTEL[2],PASTEL[4]),
+    body:(Q,seg)=>[[dot(seg[0]?.color)+'신탁계정대',won(seg[0]?.value)],[dot(seg[1]?.color)+'자기자본',won(seg[1]?.value)]]},
   {k:'net_income', t:'당기순이익 (분기)', kind:'amount', f:'net_income', signed:true,
-    lines:Q=>{ const t=total('net_income_ttm',Q); const loss=D.companies.filter(c=>{const v=val(c.code,'net_income',Q);return v!=null&&v<0}).length;
-      return [['4분기 롤링 합계',won(t?.sum)],['적자',`${loss}개사`]]; }},
+    seg:Q=>{ const v=D.companies.map(c=>val(c.code,'net_income',Q)).filter(x=>x!=null);
+      const pos=v.filter(x=>x>=0).length, neg=v.length-pos;
+      return v.length?[{label:'흑자',value:pos,pct:pos/v.length*100,color:PASTEL[0]},{label:'적자',value:neg,pct:neg/v.length*100,color:PASTEL[3]}]:[]; },
+    center:seg=>[`${seg[0]?.value??0}/${(seg[0]?.value??0)+(seg[1]?.value??0)}`,'흑자'],
+    body:(Q,seg)=>{ const t=total('net_income_ttm',Q);
+      return [['4분기 롤링 합계',won(t?.sum)],[dot(seg[0]?.color)+'흑자',`${seg[0]?.value??0}개사`],[dot(seg[1]?.color)+'적자',`${seg[1]?.value??0}개사`]]; }},
+  {k:'trust_share', t:'수탁고 점유율', kind:'amount', f:'trust_assets', comp:true,
+    seg:Q=>shares('trust_assets',Q),
+    body:(Q,seg)=>{ const top3=seg.filter(x=>x.label!=='기타').slice(0,3).reduce((a,x)=>a+x.pct,0);
+      return seg.length?[['상위 3사 점유율',`${top3.toFixed(1)}%`]]:[['수탁고','데이터 없음']]; }},
 ];
 function cardMain(cd,Q){
   if(cd.kind==='ratio'){ const a=average(cd.k,Q); return a?a.v:null; }
@@ -349,20 +413,27 @@ function renderCards(){
     }else{
       const t=total(cd.f,q);
       cls=cd.signed&&v!=null?(v<0?'a':'s'):'';
-      top=`<span class="cv ${cls}">${won(t?.sum)}<span class="k">합계</span></span>
-           <span class="cv2">${won(t?.avg)}<span class="k">평균 (${t?.n??0}개사)</span></span>`;
+      top=`<span class="cv ${cls}">${big(t?.sum)}<span class="k">합계</span></span>
+           <span class="cv2">${won(t?.avg)}<span class="k">평균</span></span>`;
     }
     let del='';
     if(v!=null&&p!=null){
       const d=v-p, dir=cd.kind==='ratio'?m.dir:(cd.k==='trust_account_loan'?'down':'up');
       const worse=(dir==='down'&&d>0)||(dir==='up'&&d<0);
-      const txt=cd.kind==='ratio'?`${Math.abs(d).toFixed(1)}%p`:won(Math.abs(d));
+      const txt=cd.kind==='ratio'?`${Math.abs(d).toFixed(1)}%p`:big(Math.abs(d));
       del=Math.abs(d)<0.05?`<span class="cd">전분기와 같음</span>`
         :`<span class="cd ${worse?'up':'dn'}">전분기 대비 ${d>0?'▲':'▼'}${txt}</span>`;
     }
-    const lines=cd.lines(q).map(([a,b])=>`<span class="cl"><span>${a}</span><b>${b}</b></span>`).join('');
+    const seg=cd.seg(q);
+    let center, sub;
+    if(cd.center){ [center,sub]=cd.center(seg); }
+    else if(cd.kind==='ratio'){ center=fmt(v,'%'); sub=null; }
+    else { center=seg[0]?`${seg[0].pct.toFixed(0)}%`:'–'; sub=seg[0]?'1위':''; }
+    const lines=cd.body(q,seg).map(([a,b])=>`<span class="cl"><span>${a}</span><b>${b}</b></span>`).join('');
+    const cap=cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':(cd.comp?'<span class="ccap">회사별 구성</span>':'');
     return `<button class="card" type="button" data-k="${cd.k}" aria-pressed="${cd.k===mk}">
-      <span class="ct">${cd.t}</span>${top}${del}<span class="cbody">${cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':''}${lines}</span></button>`;
+      <span class="ctop"><span class="cmain"><span class="ct">${cd.t}</span>${top}${del}</span>${seg.length?donut(seg,center,sub):''}</span>
+      <span class="cbody">${cd.kind==='ratio'?cap+lines:lines+cap}${cd.comp?legend(seg):''}</span></button>`;
   }).join('');
   $('#cards').querySelectorAll('.card').forEach(b=>b.onclick=()=>{
     selectMetric(b.dataset.k);
@@ -390,6 +461,10 @@ function renderLadder(){
     agg=`<div><dt>${n}개사 합산 ${m.n}</dt><dd>${fmt(avg.v,'%')}</dd></div>
       <div><dt>${FIELD[m.agg[0]]||m.agg[0]} 합계</dt><dd>${won(avg.nu)}</dd></div>
       <div><dt>${FIELD[m.agg[1]]||m.agg[1]} 합계</dt><dd>${won(avg.de)}</dd></div>`;
+  }else if(avg&&m.comp){
+    const t=total(m.comp[0]);
+    agg=`<div><dt>${n}개사 ${FIELD[m.comp[0]]} 합계</dt><dd>${won(t?.sum)}</dd></div>
+      <div><dt>평균 ${m.n}</dt><dd>${fmt(avg.v,'%')}<span class="k">${avg.n}개사</span></dd></div>`;
   }else if(avg&&m.u==='억'){
     agg=`<div><dt>${n}개사 합계</dt><dd>${won(avg.sum)}</dd></div>
       <div><dt>산술평균</dt><dd>${won(avg.v)}<span class="k">${avg.n}개사</span></dd></div>`;
@@ -421,7 +496,8 @@ function renderLadder(){
       if(Math.abs(d)>=0.05) del=`<span class="rdel ${worse?'up':'dn'}">${d>0?'▲':'▼'}${fmt(Math.abs(d),m.u)}</span>`;
       else del='<span class="rdel">–</span>';
     }
-    const comp=m.agg?m.agg.map(f=>`<span><i>${FIELD[f]||f}</i>${won(val(r.c.code,f))}</span>`).join(''):'';
+    const cf=m.agg||m.comp;
+    const comp=cf?cf.map(f=>`<span><i>${FIELD[f]||f}</i>${won(val(r.c.code,f))}</span>`).join(''):'';
     const ex=open===r.c.code;
     return `<button class="row" type="button" data-code="${r.c.code}" aria-expanded="${ex}">
       <span class="rname">${r.c.name}</span>
