@@ -66,6 +66,7 @@ TB_PL = "SM007"      # 요약손익계산서(고유계정, '11.03월 이후)
 TB_NCR = "SM009"     # 자본적정성(영업용순자본비율)
 TB_NPL = "SM013"     # 자산건전성(고정이하자산비율)
 TB_CLASS = "SM016"   # 자산건전성 분류(자산유형 × 정상~추정손실)
+TB_TRUST = "SM006"   # 요약재무상태표(신탁계정) — 수탁고
 
 # 계정항목코드 → 내부 필드명
 MAP_BS = {
@@ -98,6 +99,9 @@ MAP_NPL = {
     "A": "substandard_below",       # 고정이하자산
     "B": "classified_assets",       # 건전성 분류대상 자산
     "C": "substandard_below_ratio", # 고정이하자산비율 (%) ★
+}
+MAP_TRUST = {
+    "B": "trust_assets",            # 신탁계정 자산총계 = 수탁고 ★
 }
 
 TIMEOUT = 40
@@ -236,6 +240,7 @@ def derive(raw):
         "operating_revenue": eok(raw.get("operating_revenue")),
         "trust_fee": eok(raw.get("trust_fee")),
         "trust_account_loan": eok(tal),
+        "trust_assets": eok(raw.get("trust_assets")),
         "allowance_tal": eok(allow_tal),
         "borrowings": eok(borrow),
         # 건전성
@@ -345,6 +350,7 @@ def main():
             (TB_PL, MAP_PL),
             (TB_NCR, MAP_NCR),
             (TB_NPL, MAP_NPL),
+            (TB_TRUST, MAP_TRUST),
         ):
             try:
                 for month, values in fetch_table(code, list_no, field_map).items():
@@ -363,6 +369,14 @@ def main():
         all_months.update(merged.keys())
         latest = max(merged) if merged else "없음"
         print(f"    분기 {len(merged)}개 수집, 최신 {latest}")
+
+    # 수탁고 점유율: 분기별 전 신탁사 수탁고 합계 대비 각 사 비중(%)
+    for month in all_months:
+        vals = {code: (dataset[code].get(month) or {}).get("trust_assets") for code in dataset}
+        tot = sum(v for v in vals.values() if v)
+        for code, v in vals.items():
+            if month in dataset[code]:
+                dataset[code][month]["trust_share"] = pct(v, tot)
 
     # 공시 지연으로 일부 회사만 올라온 분기는 제외한다.
     # 자산총계가 채워진 회사가 과반이 아니면 아직 미완성 분기로 본다.
@@ -389,7 +403,7 @@ def main():
             "generated_at": datetime.now(KST).replace(tzinfo=None).isoformat(timespec="seconds"),
             "unit": "금액=억원, 비율=%",
             "basis": "고유계정 기준 (신탁계정 별도)",
-            "tables": [TB_BS, TB_PL, TB_NCR, TB_NPL, TB_CLASS],
+            "tables": [TB_BS, TB_PL, TB_NCR, TB_NPL, TB_CLASS, TB_TRUST],
             "latest_quarter": quarters[-1] if quarters else None,
         },
         "quarters": quarters,
