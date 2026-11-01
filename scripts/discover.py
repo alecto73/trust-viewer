@@ -5,6 +5,7 @@ FISIS 코드 탐색기 — 회사코드 / 통계표코드 / 계정항목코드�
 
 사용법:
   python scripts/discover.py companies                # 부동산신탁 14개사 코드
+  python scripts/discover.py companies B              # 공통(신탁) 권역 회사코드(수탁고 SB008 등)
   python scripts/discover.py tables                   # 부동산신탁 통계표 전체
   python scripts/discover.py accounts SM005           # 통계표의 계정항목 전체
   python scripts/discover.py accounts SM005 신탁계정대   # 계정항목명 검색
@@ -49,7 +50,8 @@ def main():
     cmd = args[0]
 
     if cmd == "companies":
-        for row in call("companySearch", partDiv="M")["list"]:
+        part = args[1] if len(args) > 1 else "M"     # M=부동산신탁, B=공통(신탁) 등
+        for row in call("companySearch", partDiv=part)["list"]:
             mark = "  (폐업)" if "[폐]" in row["finance_nm"] else ""
             print(f'{row["finance_cd"]}  {row["finance_nm"]}{mark}')
 
@@ -71,6 +73,18 @@ def main():
             if needle and needle not in row["account_nm"]:
                 continue
             print(f'{row["account_cd"]:8} {row["account_nm"]}')
+
+    elif cmd == "multi":
+        # 여러 명령을 ; 로 이어서 한 번에 실행 (Actions 탐색용)
+        for part in " ".join(args[1:]).split(";"):
+            sub = part.split()
+            if sub:
+                print(f"\n$ discover.py {' '.join(sub)}")
+                sys.argv = [sys.argv[0]] + sub
+                try:
+                    main()
+                except SystemExit as exc:
+                    print(exc)
 
     elif cmd == "peek":
         finance_cd, list_no, base_mm = args[1], args[2], args[3]
