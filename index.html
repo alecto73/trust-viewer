@@ -50,10 +50,19 @@ button:hover{background:#f4f7f9}
 .sumhd .note{font-size:11.5px;color:var(--ink3)}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 @media (max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.card{display:flex;flex-direction:column;align-items:stretch;gap:1px;text-align:left;
-  background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px 11px;cursor:pointer}
-.card:hover{background:var(--surface);border-color:var(--ink3)}
-.card[aria-pressed=true]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.cards{padding:2px 0 6px}
+.card{position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;gap:1px;text-align:left;
+  background:linear-gradient(180deg,#ffffff 0%,#f7f9fb 100%);border:1px solid #d3dce3;border-radius:10px;
+  padding:15px 16px 13px 19px;cursor:pointer;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 1px 2px rgba(22,32,43,.08),0 8px 18px -10px rgba(22,32,43,.35);
+  transition:transform .15s ease,box-shadow .15s ease}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--neutral)}
+.card[data-g=s]::before{background:var(--safe)}.card[data-g=w]::before{background:var(--watch)}.card[data-g=a]::before{background:var(--alert)}
+.card:hover{background:linear-gradient(180deg,#ffffff 0%,#f7f9fb 100%);transform:translateY(-2px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 2px 4px rgba(22,32,43,.08),0 14px 24px -12px rgba(22,32,43,.42)}
+.card[aria-pressed=true]{border-color:var(--ink);
+  box-shadow:inset 0 0 0 1px var(--ink),0 2px 4px rgba(22,32,43,.1),0 14px 24px -12px rgba(22,32,43,.45)}
+@media (prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none}}
 .ct{font-size:12px;font-weight:600;color:var(--ink2);letter-spacing:-.01em}
 .cv{font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.3;margin-top:2px}
 .cv.s{color:var(--safe)}.cv.w{color:var(--watch)}.cv.a{color:var(--alert)}
@@ -67,15 +76,7 @@ button:hover{background:#f4f7f9}
 .cbody{display:flex;flex-direction:column;border-top:1px solid var(--rule2);margin-top:7px;padding-top:6px}
 .cd{font-size:11.5px;color:var(--ink3);margin-top:5px}
 .cd.up{color:var(--alert)}.cd.dn{color:var(--safe)}
-.ctop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.cmain{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
 .cv,.cv2{white-space:nowrap}
-.donut{flex:none;width:78px;height:78px;margin-top:2px}
-.donut text{font-family:inherit;font-variant-numeric:tabular-nums}
-.cl i,.clg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:0}
-.clg{display:grid;grid-template-columns:1fr 1fr;gap:1px 10px;margin-top:3px}
-.clg span{font-size:11px;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.clg b{font-weight:600;color:var(--ink2);margin-left:3px}
 
 /* ── 지표 선택 ── */
 .metrics{display:flex;gap:6px;overflow-x:auto;padding:14px 0 12px;scrollbar-width:thin}
@@ -156,11 +157,8 @@ footer b{color:var(--ink2);font-weight:600}
 @media (max-width:720px){
   .wrap{padding:0 13px}
   .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-  .card{padding:10px 11px 9px}
-  .cv{font-size:18px}
-  .cv .k,.cv2 .k{display:block;margin-left:0}
-  .donut{width:54px;height:54px}
-  .clg{grid-template-columns:1fr}
+  .card{padding:12px 11px 10px 15px}
+  .cv{font-size:19px}
   .row{grid-template-columns:1fr 74px 52px;grid-template-areas:"n v d" "t t t" "c c c";gap:5px 8px;padding:9px 13px}
   .rname{grid-area:n}.rval{grid-area:v}.rdel{grid-area:d}.track{grid-area:t}
   .comp{grid-area:c;flex-direction:row;justify-content:flex-start;gap:12px}
@@ -211,7 +209,7 @@ footer b{color:var(--ink2);font-weight:600}
       <span><i style="background:var(--safe)"></i>양호</span>
       <span><i style="background:var(--watch)"></i>주의</span>
       <span><i style="background:var(--alert)"></i>경계</span>
-      <span><i style="background:var(--neutral)"></i>규모지표(등급 없음)</span>
+      <span id="legrel">절대 기준 없는 지표는 업계 내 상·중·하위 1/3로 색 구분</span>
       <span><i style="width:0;border-left:1.5px dashed var(--ink);height:11px;background:none"></i>업계 평균</span>
       <span id="legendq">회사명을 누르면 분기별 추이가 펼쳐집니다</span>
     </div>
@@ -249,15 +247,15 @@ const METRICS=[
  {k:'net_income',    n:'당기순이익',            u:'억', dir:'up',   thr:0,  band:[0,-200],   note:'해당 분기에 발생한 순이익입니다(분기 단독, 누적 아님).'},
  {k:'roe_ttm',       n:'ROE (4분기 롤링)',      u:'%',  dir:'up',   cap:15,   min:-40, thr:0,  band:[0,-10], agg:['net_income_ttm','total_equity'],    note:'최근 4개 분기 순이익 합계를 기말 자기자본으로 나눈 값입니다.'},
  {k:'net_income_ttm',n:'순이익 (4분기 롤링)',   u:'억', dir:'up',   cap:600,  min:-1200, thr:0,  band:[0,-500],   note:'최근 4개 분기 순이익 합계입니다.'},
- {k:'trust_account_loan',n:'신탁계정대 잔액',   u:'억', dir:'down', cap:13000},
- {k:'trust_share',   n:'수탁고 점유율',         u:'%',  comp:['trust_assets'], note:'전 신탁사 수탁고(신탁계정 자산총계) 합계 중 각 사 비중입니다.'},
- {k:'trust_assets',  n:'수탁고',                u:'억', note:'신탁계정 자산총계(FISIS SM006)입니다.'},
- {k:'total_assets',  n:'총자산',                u:'억'},
- {k:'total_equity',  n:'자기자본',              u:'억'},
- {k:'capital_stock', n:'자본금',                u:'억'},
+ {k:'trust_account_loan',n:'신탁계정대 잔액',   u:'억', dir:'down', cap:13000, rel:true},
+ {k:'trust_share',   n:'수탁고 점유율',         u:'%',  dir:'up', rel:true, comp:['trust_assets'], note:'전 신탁사 수탁고(신탁계정 자산총계) 합계 중 각 사 비중입니다.'},
+ {k:'trust_assets',  n:'수탁고',                u:'억', dir:'up', rel:true, note:'신탁계정 자산총계(FISIS SM006)입니다.'},
+ {k:'total_assets',  n:'총자산',                u:'억', dir:'up', rel:true},
+ {k:'total_equity',  n:'자기자본',              u:'억', dir:'up', rel:true},
+ {k:'capital_stock', n:'자본금',                u:'억', dir:'up', rel:true},
  {k:'debt_ratio',    n:'부채비율',              u:'%',  dir:'down', cap:600,  band:[200,400], agg:['total_liabilities','total_equity']},
  {k:'net_borrow_dependency',n:'순차입금의존도', u:'%',  dir:'down', cap:60,   band:[20,40], agg:['net_borrowings','total_assets'],    note:'(차입부채 − 현금및예치금) / 총자산. 음수는 순현금 상태입니다.'},
- {k:'trust_fee_share',n:'신탁보수/영업수익',    u:'%',  agg:['trust_fee','operating_revenue'], note:'영업수익 중 신탁보수 비중. 본업 수익 의존도입니다.'},
+ {k:'trust_fee_share',n:'신탁보수/영업수익',    u:'%',  dir:'up', rel:true, agg:['trust_fee','operating_revenue'], note:'영업수익 중 신탁보수 비중. 본업 수익 의존도입니다.'},
 ];
 // 비율 지표의 분자·분모 금액 항목 이름
 const FIELD={
@@ -276,8 +274,23 @@ const TCOLS=['ncr','tal_to_equity','allowance_coverage','tal_substandard_ratio',
 let D=null, mk='ncr', q=null, sort={k:'ncr',asc:true}, open=null, origin='내장 스냅숏';
 const $=s=>document.querySelector(s), M=k=>METRICS.find(m=>m.k===k);
 
-function grade(m,v){
+const relCache={};
+function relCut(m,Q){
+  // 업계 내 상대평가: 해당 분기 값을 정렬해 상·하위 1/3 경계를 구한다
+  const key=m.k+'|'+Q; if(relCache[key]) return relCache[key];
+  const vs=D.companies.map(c=>D.data[c.code]?.[Q]?.[m.k]).filter(x=>x!=null).sort((a,b)=>a-b);
+  if(vs.length<3) return null;
+  const lo=vs[Math.floor(vs.length/3)], hi=vs[Math.ceil(vs.length*2/3)-1];
+  return relCache[key]=[lo,hi];
+}
+function grade(m,v,qq){
   if(v==null) return 'n';
+  if(m.rel){
+    const cut=relCut(m,qq??q); if(!cut) return 'n';
+    const [lo,hi]=cut;
+    if(m.dir==='up')   return v>=hi?'s':(v>lo?'w':'a');
+    if(m.dir==='down') return v<=lo?'s':(v<hi?'w':'a');
+  }
   if(!m.band) return 'n';
   const [g,b]=m.band;
   if(m.dir==='up')   return v>=g?'s':(v>=b?'w':'a');
@@ -333,69 +346,22 @@ function sparkline(vals,cls){
 }
 
 /* ── 업계 요약 카드 ── */
-// 연한 파스텔 팔레트 (도넛 전용)
-const PASTEL=['#9fd8cc','#f8c9a3','#c9c0ee','#f4b9c7','#b3d4ef','#efdf9c'], PGRAY='#dfe5ea';
-const short=nm=>nm.replace(/\(주\)|주식회사/g,'').replace(/(자산|부동산)?신탁$/,'').trim();
-function shares(field,Q,top=4){
-  // 회사별 구성: 상위 top개사 + 기타
-  const rows=D.companies.map(c=>({n:short(c.name),v:val(c.code,field,Q)})).filter(r=>r.v!=null&&r.v>0)
-    .sort((a,b)=>b.v-a.v);
-  const tot=rows.reduce((a,r)=>a+r.v,0); if(!tot) return [];
-  const seg=rows.slice(0,top).map((r,i)=>({label:r.n,value:r.v,pct:r.v/tot*100,color:PASTEL[i]}));
-  const rest=rows.slice(top).reduce((a,r)=>a+r.v,0);
-  if(rest>0) seg.push({label:'기타',value:rest,pct:rest/tot*100,color:PGRAY});
-  return seg;
-}
-function pair(k,Q,c1,c2){
-  // 비율 지표: 분자·분모 금액 구성
-  const a=average(k,Q), m=M(k); if(!a) return [];
-  const t=Math.abs(a.nu)+Math.abs(a.de);
-  return [{label:FIELD[m.agg[0]],value:a.nu,pct:Math.abs(a.nu)/t*100,color:c1},
-          {label:FIELD[m.agg[1]],value:a.de,pct:Math.abs(a.de)/t*100,color:c2}];
-}
-function donut(seg,center,sub){
-  const R=30, C=2*Math.PI*R; let off=0;
-  const arcs=seg.map(s=>{
-    const len=Math.max(0,s.pct)/100*C;
-    const el=`<circle cx="39" cy="39" r="${R}" fill="none" stroke="${s.color}" stroke-width="13"
-      stroke-dasharray="${len.toFixed(2)} ${(C-len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}"
-      transform="rotate(-90 39 39)"/>`;
-    off+=len; return el;
-  }).join('');
-  return `<svg class="donut" viewBox="0 0 78 78" aria-hidden="true">
-    <circle cx="39" cy="39" r="${R}" fill="none" stroke="${PGRAY}" stroke-width="13"/>${arcs}
-    <text x="39" y="${sub?38:43}" text-anchor="middle" font-size="${center.length>5?11:12.5}" font-weight="700" fill="#16202b">${center}</text>
-    ${sub?`<text x="39" y="51" text-anchor="middle" font-size="9" fill="#7d8b98">${sub}</text>`:''}</svg>`;
-}
 const big=v=>v==null?'–':(Math.abs(v)>=10000?(v/10000).toFixed(1)+'조':won(v));
-const dot=c=>`<i style="background:${c}"></i>`;
-const legend=seg=>`<span class="clg">${seg.map(x=>`<span>${dot(x.color)}${x.label}<b>${x.pct.toFixed(0)}%</b></span>`).join('')}</span>`;
-
 const CARDS=[
   {k:'ncr', t:'영업용순자본비율', kind:'ratio',
-    seg:Q=>pair('ncr',Q,PASTEL[0],PASTEL[1]),
-    body:(Q,seg)=>{ const low=D.companies.filter(c=>{const v=val(c.code,'ncr',Q);return v!=null&&v<150}).length;
-      return [[dot(seg[0]?.color)+'영업용순자본',won(seg[0]?.value)],[dot(seg[1]?.color)+'총위험액',won(seg[1]?.value)],['150% 미달',`${low}개사`]]; }},
+    lines:Q=>{ const a=average('ncr',Q); const low=D.companies.filter(c=>{const v=val(c.code,'ncr',Q);return v!=null&&v<150}).length;
+      return [['영업용순자본',won(a?.nu)],['총위험액',won(a?.de)],['150% 미달',`${low}개사`]]; }},
   {k:'debt_ratio', t:'부채비율', kind:'ratio',
-    seg:Q=>pair('debt_ratio',Q,PASTEL[3],PASTEL[4]),
-    body:(Q,seg)=>[[dot(seg[0]?.color)+'부채총계',won(seg[0]?.value)],[dot(seg[1]?.color)+'자기자본',won(seg[1]?.value)]]},
-  {k:'trust_account_loan', t:'신탁계정대 잔액', kind:'amount', f:'trust_account_loan', comp:true,
-    seg:Q=>shares('trust_account_loan',Q),
-    body:Q=>{ const a=average('tal_substandard_ratio',Q); return [['고정이하비율(합산)',a?fmt(a.v,'%'):'–']]; }},
+    lines:Q=>{ const a=average('debt_ratio',Q); return [['부채총계',won(a?.nu)],['자기자본',won(a?.de)]]; }},
+  {k:'trust_account_loan', t:'신탁계정대 잔액', kind:'amount', f:'trust_account_loan', g:'tal_substandard_ratio',
+    lines:Q=>{ const a=average('tal_substandard_ratio',Q); return [['고정이하비율(합산)',a?fmt(a.v,'%'):'–']]; }},
   {k:'tal_to_equity', t:'신탁계정대/자기자본', kind:'ratio',
-    seg:Q=>pair('tal_to_equity',Q,PASTEL[2],PASTEL[4]),
-    body:(Q,seg)=>[[dot(seg[0]?.color)+'신탁계정대',won(seg[0]?.value)],[dot(seg[1]?.color)+'자기자본',won(seg[1]?.value)]]},
+    lines:Q=>{ const a=average('tal_to_equity',Q); return [['신탁계정대',won(a?.nu)],['자기자본',won(a?.de)]]; }},
   {k:'net_income', t:'당기순이익 (분기)', kind:'amount', f:'net_income', signed:true,
-    seg:Q=>{ const v=D.companies.map(c=>val(c.code,'net_income',Q)).filter(x=>x!=null);
-      const pos=v.filter(x=>x>=0).length, neg=v.length-pos;
-      return v.length?[{label:'흑자',value:pos,pct:pos/v.length*100,color:PASTEL[0]},{label:'적자',value:neg,pct:neg/v.length*100,color:PASTEL[3]}]:[]; },
-    center:seg=>[`${seg[0]?.value??0}/${(seg[0]?.value??0)+(seg[1]?.value??0)}`,'흑자'],
-    body:(Q,seg)=>{ const t=total('net_income_ttm',Q);
-      return [['4분기 롤링 합계',won(t?.sum)],[dot(seg[0]?.color)+'흑자',`${seg[0]?.value??0}개사`],[dot(seg[1]?.color)+'적자',`${seg[1]?.value??0}개사`]]; }},
-  {k:'trust_share', t:'수탁고 점유율', kind:'amount', f:'trust_assets', comp:true,
-    seg:Q=>shares('trust_assets',Q),
-    body:(Q,seg)=>{ const top3=seg.filter(x=>x.label!=='기타').slice(0,3).reduce((a,x)=>a+x.pct,0);
-      return seg.length?[['상위 3사 점유율',`${top3.toFixed(1)}%`]]:[['수탁고','데이터 없음']]; }},
+    lines:Q=>{ const t=total('net_income_ttm',Q); const loss=D.companies.filter(c=>{const v=val(c.code,'net_income',Q);return v!=null&&v<0}).length;
+      return [['4분기 롤링 합계',won(t?.sum)],['적자',`${loss}개사`]]; }},
+  {k:'trust_share', t:'수탁고', kind:'amount', f:'trust_assets',
+    lines:Q=>{ const a=average('trust_share',Q); return [['평균 점유율',a?fmt(a.v,'%'):'–']]; }},
 ];
 function cardMain(cd,Q){
   if(cd.kind==='ratio'){ const a=average(cd.k,Q); return a?a.v:null; }
@@ -406,15 +372,16 @@ function renderCards(){
   $('#sumtitle').textContent=`업계 요약 · ${q} · ${n}개사`;
   $('#cards').innerHTML=CARDS.map(cd=>{
     const m=M(cd.k), v=cardMain(cd,q), p=pq?cardMain(cd,pq):null;
-    let top, cls='';
+    let top, cls='', g='n';
     if(cd.kind==='ratio'){
-      cls=grade(m,v);
+      cls=g=grade(m,v);
       top=`<span class="cv ${cls}">${fmt(v,'%')}<span class="k">합산</span></span>`;
     }else{
       const t=total(cd.f,q);
       cls=cd.signed&&v!=null?(v<0?'a':'s'):'';
+      g=cd.signed?(cls||'n'):(cd.g?grade(M(cd.g),average(cd.g)?.v):'n');
       top=`<span class="cv ${cls}">${big(t?.sum)}<span class="k">합계</span></span>
-           <span class="cv2">${won(t?.avg)}<span class="k">평균</span></span>`;
+           <span class="cv2">${won(t?.avg)}<span class="k">평균 (${t?.n??0}개사)</span></span>`;
     }
     let del='';
     if(v!=null&&p!=null){
@@ -424,16 +391,9 @@ function renderCards(){
       del=Math.abs(d)<0.05?`<span class="cd">전분기와 같음</span>`
         :`<span class="cd ${worse?'up':'dn'}">전분기 대비 ${d>0?'▲':'▼'}${txt}</span>`;
     }
-    const seg=cd.seg(q);
-    let center, sub;
-    if(cd.center){ [center,sub]=cd.center(seg); }
-    else if(cd.kind==='ratio'){ center=fmt(v,'%'); sub=null; }
-    else { center=seg[0]?`${seg[0].pct.toFixed(0)}%`:'–'; sub=seg[0]?'1위':''; }
-    const lines=cd.body(q,seg).map(([a,b])=>`<span class="cl"><span>${a}</span><b>${b}</b></span>`).join('');
-    const cap=cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':(cd.comp?'<span class="ccap">회사별 구성</span>':'');
-    return `<button class="card" type="button" data-k="${cd.k}" aria-pressed="${cd.k===mk}">
-      <span class="ctop"><span class="cmain"><span class="ct">${cd.t}</span>${top}${del}</span>${seg.length?donut(seg,center,sub):''}</span>
-      <span class="cbody">${cd.kind==='ratio'?cap+lines:lines+cap}${cd.comp?legend(seg):''}</span></button>`;
+    const lines=cd.lines(q).map(([a,b])=>`<span class="cl"><span>${a}</span><b>${b}</b></span>`).join('');
+    return `<button class="card" type="button" data-k="${cd.k}" data-g="${g}" aria-pressed="${cd.k===mk}">
+      <span class="ct">${cd.t}</span>${top}${del}<span class="cbody">${cd.kind==='ratio'?'<span class="ccap">업계 합계</span>':''}${lines}</span></button>`;
   }).join('');
   $('#cards').querySelectorAll('.card').forEach(b=>b.onclick=()=>{
     selectMetric(b.dataset.k);
@@ -453,7 +413,8 @@ function renderLadder(){
   const m=M(mk);
   $('#mtitle').textContent=m.n;
   const avg=average(mk), n=D.companies.length;
-  $('#mnote').textContent=m.note || (m.dir==='down'?'낮을수록 안전':m.dir==='up'?'높을수록 안전':'규모 비교');
+  $('#mnote').textContent=(m.note || (m.dir==='down'?'낮을수록 안전':m.dir==='up'?'높을수록 안전':'규모 비교'))
+    + (m.rel?`  ·  막대 색은 업계 내 상대평가(${m.dir==='down'?'낮을수록':'높을수록'} 양호)`:'');
 
   // 업계 합산·합계 요약줄
   let agg='';
@@ -539,7 +500,7 @@ function renderTable(){
   });
   $('#tbody').innerHTML=rows.map(c=>'<tr><td class="co">'+c.name+'</td>'+TCOLS.map(k=>{
     const m=M(k), v=val(c.code,k), g=grade(m,v);
-    return `<td>${m.band?`<span class="tag ${g}">${fmt(v,m.u)}</span>`:`<span class="num">${fmt(v,m.u)}</span>`}</td>`;
+    return `<td>${(m.band||m.rel)?`<span class="tag ${g}">${fmt(v,m.u)}</span>`:`<span class="num">${fmt(v,m.u)}</span>`}</td>`;
   }).join('')+'</tr>').join('');
   $('#tfoot').innerHTML=`<td class="co">${D.companies.length}개사 합산·평균</td>`+TCOLS.map(k=>{
     const a=average(k);
