@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "금융감독원 금융통계정보시스템(FISIS) 오픈API",
-  "generated_at": "2026-10-22T14:05:47",
+  "generated_at": "2026-11-02T07:32:28",
   "unit": "금액=억원, 비율=%",
   "basis": "고유계정 기준 (신탁계정 별도)",
   "tables": [
@@ -9,7 +9,8 @@
    "SM007",
    "SM009",
    "SM013",
-   "SM016"
+   "SM016",
+   "SM006"
   ],
   "latest_quarter": "2026Q2"
  },
@@ -104,6 +105,7 @@
     "operating_revenue": 364.0,
     "trust_fee": 267.3,
     "trust_account_loan": 5050.7,
+    "trust_assets": 581062.0,
     "allowance_tal": 365.7,
     "borrowings": 2250.0,
     "ncr": 748.28,
@@ -120,7 +122,8 @@
     "net_income_ttm": 612.0,
     "operating_revenue_ttm": 1489.2,
     "roa_ttm": 8.25,
-    "roe_ttm": 14.58
+    "roe_ttm": 14.58,
+    "trust_share": 10.76
    },
    "2023Q4": {
     "total_liabilities": 5733.5,
@@ -139,6 +142,7 @@
     "operating_revenue": 407.0,
     "trust_fee": 281.2,
     "trust_account_loan": 6859.2,
+    "trust_assets": 604490.5,
     "allowance_tal": 1590.4,
     "borrowings": 4299.6,
     "ncr": 517.54,
@@ -155,7 +159,8 @@
     "net_income_ttm": -840.7,
     "operating_revenue_ttm": 1487.7,
     "roa_ttm": -9.78,
-    "roe_ttm": -29.39
+    "roe_ttm": -29.39,
+    "trust_share": 11.2
    },
    "2024Q1": {
     "total_liabilities": 7018.5,
@@ -174,6 +179,7 @@
     "operating_revenue": 320.3,
     "trust_fee": 187.3,
     "trust_account_loan": 7866.2,
+    "trust_assets": 620396.0,
     "allowance_tal": 1907.2,
     "borrowings": 5249.7,
     "ncr": 272.66,
@@ -190,7 +196,8 @@
     "net_income_ttm": -1497.7,
     "operating_revenue_ttm": 1450.0,
     "roa_ttm": -15.92,
-    "roe_ttm": -62.63
+    "roe_ttm": -62.63,
+    "trust_share": 11.4
    },
    "2024Q2": {
     "total_liabilities": 7980.7,
@@ -209,6 +216,7 @@
     "operating_revenue": 350.8,
     "trust_fee": 202.2,
     "trust_account_loan": 8851.5,
+    "trust_assets": 630257.7,
     "allowance_tal": 2763.5,
     "borrowings": 6370.3,
     "ncr": 752.77,
@@ -225,7 +233,8 @@
     "net_income_ttm": -2252.3,
     "operating_revenue_ttm": 1442.1,
     "roa_ttm": -19.61,
-    "roe_ttm": -64.31
+    "roe_ttm": -64.31,
+    "trust_share": 11.51
    },
    "2024Q3": {
     "total_liabilities": 5628.9,
@@ -244,6 +253,7 @@
     "operating_revenue": 389.9,
     "trust_fee": 218.7,
     "trust_account_loan": 9523.0,
+    "trust_assets": 649163.9,
     "allowance_tal": 3065.6,
     "borrowings": 4718.9,
     "ncr": 1564.3,
@@ -260,7 +270,8 @@
     "net_income_ttm": -2194.6,
     "operating_revenue_ttm": 1468.0,
     "roa_ttm": -20.33,
-    "roe_ttm": -42.5
+    "roe_ttm": -42.5,
+    "trust_share": 11.45
    },
    "2024Q4": {
     "total_liabilities": 6279.0,
@@ -279,6 +290,7 @@
     "operating_revenue": 335.6,
     "trust_fee": 170.5,
     "trust_account_loan": 11539.6,
+    "trust_assets": 662578.9,
     "allowance_tal": 3440.8,
     "borrowings": 5484.7,
     "ncr": 1393.76,
@@ -295,7 +307,8 @@
     "net_income_ttm": -1133.3,
     "operating_revenue_ttm": 1396.6,
     "roa_ttm": -10.18,
-    "roe_ttm": -23.34
+    "roe_ttm": -23.34,
+    "trust_share": 11.55
    },
    "2025Q1": {
     "total_liabilities": 5733.4,
@@ -314,6 +327,7 @@
     "operating_revenue": 320.9,
     "trust_fee": 145.6,
     "trust_account_loan": 12186.7,
+    "trust_assets": 682876.6,
     "allowance_tal": 3627.9,
     "borrowings": 5144.2,
     "ncr": 1276.97,
@@ -330,7 +344,8 @@
     "net_income_ttm": -577.9,
     "operating_revenue_ttm": 1397.2,
     "roa_ttm": -5.43,
-    "roe_ttm": -11.77
+    "roe_ttm": -11.77,
+    "trust_share": 11.91
    },
    "2025Q2": {
     "total_liabilities": 6990.1,
@@ -349,6 +364,7 @@
     "operating_revenue": 891.6,
     "trust_fee": 114.2,
     "trust_account_loan": 12658.5,
+    "trust_assets": 702143.4,
     "allowance_tal": 3981.6,
     "borrowings": 5501.7,
     "ncr": 900.03,
@@ -365,7 +381,8 @@
     "net_income_ttm": -294.1,
     "operating_revenue_ttm": 1938.0,
     "roa_ttm": -2.54,
-    "roe_ttm": -6.43
+    "roe_ttm": -6.43,
+    "trust_share": 12.08
    },
    "2025Q3": {
     "total_liabilities": 7116.0,
@@ -384,6 +401,7 @@
     "operating_revenue": 312.2,
     "trust_fee": 141.6,
     "trust_account_loan": 12882.7,
+    "trust_assets": 705130.0,
     "allowance_tal": 4104.8,
     "borrowings": 5694.8,
     "ncr": 882.3,
@@ -400,7 +418,8 @@
     "net_income_ttm": -450.8,
     "operating_revenue_ttm": 1860.3,
     "roa_ttm": -3.86,
-    "roe_ttm": -9.85
+    "roe_ttm": -9.85,
+    "trust_share": 12.11
    },
    "2025Q4": {
     "total_liabilities": 7300.1,
@@ -419,6 +438,7 @@
     "operating_revenue": 251.9,
     "trust_fee": 105.0,
     "trust_account_loan": 11878.2,
+    "trust_assets": 704171.4,
     "allowance_tal": 4498.5,
     "borrowings": 5481.7,
     "ncr": 593.14,
@@ -435,7 +455,8 @@
     "net_income_ttm": -786.9,
     "operating_revenue_ttm": 1776.6,
     "roa_ttm": -7.0,
-    "roe_ttm": -19.97
+    "roe_ttm": -19.97,
+    "trust_share": 11.94
    },
    "2026Q1": {
     "total_liabilities": 7412.1,
@@ -454,6 +475,7 @@
     "operating_revenue": 294.7,
     "trust_fee": 95.2,
     "trust_account_loan": 12279.5,
+    "trust_assets": 714493.5,
     "allowance_tal": 4478.1,
     "borrowings": 5587.3,
     "ncr": 532.0,
@@ -470,7 +492,8 @@
     "net_income_ttm": -786.8,
     "operating_revenue_ttm": 1750.4,
     "roa_ttm": -6.9,
-    "roe_ttm": -19.71
+    "roe_ttm": -19.71,
+    "trust_share": 12.09
    },
    "2026Q2": {
     "total_liabilities": 9498.8,
@@ -489,6 +512,7 @@
     "operating_revenue": 270.8,
     "trust_fee": 125.1,
     "trust_account_loan": 12469.1,
+    "trust_assets": 725211.7,
     "allowance_tal": 4877.8,
     "borrowings": 5803.8,
     "ncr": 358.14,
@@ -505,7 +529,8 @@
     "net_income_ttm": -2099.4,
     "operating_revenue_ttm": 1129.6,
     "roa_ttm": -15.74,
-    "roe_ttm": -54.74
+    "roe_ttm": -54.74,
+    "trust_share": 12.18
    }
   },
   "0010905": {
@@ -526,6 +551,7 @@
     "operating_revenue": 276.4,
     "trust_fee": 212.6,
     "trust_account_loan": 2457.0,
+    "trust_assets": 546682.1,
     "allowance_tal": 619.4,
     "borrowings": 280.0,
     "ncr": 1412.83,
@@ -542,7 +568,8 @@
     "net_income_ttm": 17.6,
     "operating_revenue_ttm": 1145.1,
     "roa_ttm": 0.31,
-    "roe_ttm": 0.36
+    "roe_ttm": 0.36,
+    "trust_share": 10.13
    },
    "2023Q4": {
     "total_liabilities": 950.6,
@@ -561,6 +588,7 @@
     "operating_revenue": 254.5,
     "trust_fee": 155.3,
     "trust_account_loan": 4404.2,
+    "trust_assets": 496259.3,
     "allowance_tal": 1029.0,
     "borrowings": 360.0,
     "ncr": 1306.37,
@@ -577,7 +605,8 @@
     "net_income_ttm": -294.9,
     "operating_revenue_ttm": 1051.5,
     "roa_ttm": -5.27,
-    "roe_ttm": -6.35
+    "roe_ttm": -6.35,
+    "trust_share": 9.19
    },
    "2024Q1": {
     "total_liabilities": 1679.0,
@@ -596,6 +625,7 @@
     "operating_revenue": 312.5,
     "trust_fee": 184.2,
     "trust_account_loan": 4587.7,
+    "trust_assets": 483698.2,
     "allowance_tal": 1556.8,
     "borrowings": 1119.3,
     "ncr": 1142.66,
@@ -612,7 +642,8 @@
     "net_income_ttm": -590.1,
     "operating_revenue_ttm": 1087.0,
     "roa_ttm": -9.74,
-    "roe_ttm": -13.46
+    "roe_ttm": -13.46,
+    "trust_share": 8.89
    },
    "2024Q2": {
     "total_liabilities": 1901.0,
@@ -631,6 +662,7 @@
     "operating_revenue": 260.7,
     "trust_fee": 152.5,
     "trust_account_loan": 5574.2,
+    "trust_assets": 470874.8,
     "allowance_tal": 2309.0,
     "borrowings": 1363.2,
     "ncr": 890.78,
@@ -647,7 +679,8 @@
     "net_income_ttm": -1064.6,
     "operating_revenue_ttm": 1104.1,
     "roa_ttm": -18.27,
-    "roe_ttm": -27.12
+    "roe_ttm": -27.12,
+    "trust_share": 8.6
    },
    "2024Q3": {
     "total_liabilities": 2504.9,
@@ -666,6 +699,7 @@
     "operating_revenue": 262.0,
     "trust_fee": 137.6,
     "trust_account_loan": 6772.4,
+    "trust_assets": 487408.7,
     "allowance_tal": 3127.9,
     "borrowings": 2030.4,
     "ncr": 535.95,
@@ -682,7 +716,8 @@
     "net_income_ttm": -1639.7,
     "operating_revenue_ttm": 1089.7,
     "roa_ttm": -28.37,
-    "roe_ttm": -50.08
+    "roe_ttm": -50.08,
+    "trust_share": 8.6
    },
    "2024Q4": {
     "total_liabilities": 4690.0,
@@ -701,6 +736,7 @@
     "operating_revenue": 383.6,
     "trust_fee": 76.9,
     "trust_account_loan": 7912.2,
+    "trust_assets": 470644.2,
     "allowance_tal": 3475.5,
     "borrowings": 3064.4,
     "ncr": 986.89,
@@ -717,7 +753,8 @@
     "net_income_ttm": -2408.9,
     "operating_revenue_ttm": 1218.8,
     "roa_ttm": -24.24,
-    "roe_ttm": -45.91
+    "roe_ttm": -45.91,
+    "trust_share": 8.21
    },
    "2025Q1": {
     "total_liabilities": 3962.2,
@@ -736,6 +773,7 @@
     "operating_revenue": 256.5,
     "trust_fee": 93.9,
     "trust_account_loan": 7989.6,
+    "trust_assets": 451976.7,
     "allowance_tal": 4227.4,
     "borrowings": 2542.4,
     "ncr": 786.39,
@@ -752,7 +790,8 @@
     "net_income_ttm": -2643.9,
     "operating_revenue_ttm": 1162.8,
     "roa_ttm": -30.49,
-    "roe_ttm": -56.13
+    "roe_ttm": -56.13,
+    "trust_share": 7.88
    },
    "2025Q2": {
     "total_liabilities": 2896.2,
@@ -771,6 +810,7 @@
     "operating_revenue": 260.2,
     "trust_fee": 87.8,
     "trust_account_loan": 9204.1,
+    "trust_assets": 466357.3,
     "allowance_tal": 5009.4,
     "borrowings": 1920.4,
     "ncr": 655.18,
@@ -787,7 +827,8 @@
     "net_income_ttm": -2427.0,
     "operating_revenue_ttm": 1162.3,
     "roa_ttm": -33.15,
-    "roe_ttm": -54.84
+    "roe_ttm": -54.84,
+    "trust_share": 8.02
    },
    "2025Q3": {
     "total_liabilities": 4664.7,
@@ -806,6 +847,7 @@
     "operating_revenue": 437.4,
     "trust_fee": 98.0,
     "trust_account_loan": 9851.7,
+    "trust_assets": 460276.9,
     "allowance_tal": 5228.8,
     "borrowings": 4064.1,
     "ncr": 694.06,
@@ -822,7 +864,8 @@
     "net_income_ttm": -1607.9,
     "operating_revenue_ttm": 1337.7,
     "roa_ttm": -17.43,
-    "roe_ttm": -35.26
+    "roe_ttm": -35.26,
+    "trust_share": 7.9
    },
    "2025Q4": {
     "total_liabilities": 5466.6,
@@ -841,6 +884,7 @@
     "operating_revenue": 353.1,
     "trust_fee": 56.0,
     "trust_account_loan": 10471.8,
+    "trust_assets": 484760.1,
     "allowance_tal": 6106.4,
     "borrowings": 4408.5,
     "ncr": 336.43,
@@ -857,7 +901,8 @@
     "net_income_ttm": -1496.3,
     "operating_revenue_ttm": 1307.2,
     "roa_ttm": -16.52,
-    "roe_ttm": -41.69
+    "roe_ttm": -41.69,
+    "trust_share": 8.22
    },
    "2026Q1": {
     "total_liabilities": 4685.8,
@@ -876,6 +921,7 @@
     "operating_revenue": 279.9,
     "trust_fee": 97.0,
     "trust_account_loan": 10936.5,
+    "trust_assets": 464019.6,
     "allowance_tal": 6223.4,
     "borrowings": 3912.1,
     "ncr": 338.75,
@@ -892,7 +938,8 @@
     "net_income_ttm": -935.7,
     "operating_revenue_ttm": 1330.6,
     "roa_ttm": -11.23,
-    "roe_ttm": -25.66
+    "roe_ttm": -25.66,
+    "trust_share": 7.85
    },
    "2026Q2": {
     "total_liabilities": 5593.2,
@@ -911,6 +958,7 @@
     "operating_revenue": 166.8,
     "trust_fee": 118.9,
     "trust_account_loan": 11038.6,
+    "trust_assets": 460179.0,
     "allowance_tal": 6489.8,
     "borrowings": 4880.4,
     "ncr": 272.94,
@@ -927,7 +975,8 @@
     "net_income_ttm": -745.4,
     "operating_revenue_ttm": 1237.2,
     "roa_ttm": -8.12,
-    "roe_ttm": -20.78
+    "roe_ttm": -20.78,
+    "trust_share": 7.73
    }
   },
   "0016953": {
@@ -948,6 +997,7 @@
     "operating_revenue": 82.8,
     "trust_fee": 58.3,
     "trust_account_loan": 820.6,
+    "trust_assets": 110557.8,
     "allowance_tal": 52.7,
     "borrowings": 0.0,
     "ncr": 1169.3,
@@ -964,7 +1014,8 @@
     "net_income_ttm": 99.7,
     "operating_revenue_ttm": 413.3,
     "roa_ttm": 5.53,
-    "roe_ttm": 6.05
+    "roe_ttm": 6.05,
+    "trust_share": 2.05
    },
    "2023Q4": {
     "total_liabilities": 814.6,
@@ -983,6 +1034,7 @@
     "operating_revenue": 151.8,
     "trust_fee": 80.8,
     "trust_account_loan": 1123.6,
+    "trust_assets": 104481.7,
     "allowance_tal": 57.3,
     "borrowings": 620.0,
     "ncr": 851.11,
@@ -999,7 +1051,8 @@
     "net_income_ttm": 132.1,
     "operating_revenue_ttm": 465.6,
     "roa_ttm": 5.31,
-    "roe_ttm": 7.89
+    "roe_ttm": 7.89,
+    "trust_share": 1.94
    },
    "2024Q1": {
     "total_liabilities": 1107.2,
@@ -1018,6 +1071,7 @@
     "operating_revenue": 124.9,
     "trust_fee": 73.9,
     "trust_account_loan": 1670.6,
+    "trust_assets": 107563.2,
     "allowance_tal": 70.9,
     "borrowings": 930.0,
     "ncr": 704.39,
@@ -1034,7 +1088,8 @@
     "net_income_ttm": 93.7,
     "operating_revenue_ttm": 465.3,
     "roa_ttm": 3.35,
-    "roe_ttm": 5.54
+    "roe_ttm": 5.54,
+    "trust_share": 1.98
    },
    "2024Q2": {
     "total_liabilities": 1119.9,
@@ -1053,6 +1108,7 @@
     "operating_revenue": 120.9,
     "trust_fee": 65.0,
     "trust_account_loan": 1693.8,
+    "trust_assets": 102975.5,
     "allowance_tal": 89.8,
     "borrowings": 990.0,
     "ncr": 730.31,
@@ -1069,7 +1125,8 @@
     "net_income_ttm": 105.9,
     "operating_revenue_ttm": 480.4,
     "roa_ttm": 3.75,
-    "roe_ttm": 6.22
+    "roe_ttm": 6.22,
+    "trust_share": 1.88
    },
    "2024Q3": {
     "total_liabilities": 1358.9,
@@ -1088,6 +1145,7 @@
     "operating_revenue": 111.1,
     "trust_fee": 61.0,
     "trust_account_loan": 1846.6,
+    "trust_assets": 104546.4,
     "allowance_tal": 104.8,
     "borrowings": 1160.0,
     "ncr": 634.9,
@@ -1104,7 +1162,8 @@
     "net_income_ttm": 60.7,
     "operating_revenue_ttm": 508.7,
     "roa_ttm": 1.98,
-    "roe_ttm": 3.56
+    "roe_ttm": 3.56,
+    "trust_share": 1.84
    },
    "2024Q4": {
     "total_liabilities": 2210.7,
@@ -1123,6 +1182,7 @@
     "operating_revenue": 110.9,
     "trust_fee": 60.8,
     "trust_account_loan": 2490.9,
+    "trust_assets": 102104.7,
     "allowance_tal": 300.8,
     "borrowings": 1950.0,
     "ncr": 774.4,
@@ -1139,7 +1199,8 @@
     "net_income_ttm": -190.6,
     "operating_revenue_ttm": 467.8,
     "roa_ttm": -5.16,
-    "roe_ttm": -12.85
+    "roe_ttm": -12.85,
+    "trust_share": 1.78
    },
    "2025Q1": {
     "total_liabilities": 2117.6,
@@ -1158,6 +1219,7 @@
     "operating_revenue": 196.2,
     "trust_fee": 63.8,
     "trust_account_loan": 1973.3,
+    "trust_assets": 109145.3,
     "allowance_tal": 345.8,
     "borrowings": 1846.3,
     "ncr": 649.14,
@@ -1174,7 +1236,8 @@
     "net_income_ttm": -159.0,
     "operating_revenue_ttm": 539.1,
     "roa_ttm": -4.36,
-    "roe_ttm": -10.38
+    "roe_ttm": -10.38,
+    "trust_share": 1.9
    },
    "2025Q2": {
     "total_liabilities": 1420.0,
@@ -1193,6 +1256,7 @@
     "operating_revenue": 121.6,
     "trust_fee": 62.8,
     "trust_account_loan": 2194.5,
+    "trust_assets": 120312.0,
     "allowance_tal": 429.0,
     "borrowings": 1241.4,
     "ncr": 642.34,
@@ -1209,7 +1273,8 @@
     "net_income_ttm": -164.9,
     "operating_revenue_ttm": 539.8,
     "roa_ttm": -5.58,
-    "roe_ttm": -10.72
+    "roe_ttm": -10.72,
+    "trust_share": 2.07
    },
    "2025Q3": {
     "total_liabilities": 1537.1,
@@ -1228,6 +1293,7 @@
     "operating_revenue": 140.1,
     "trust_fee": 71.0,
     "trust_account_loan": 2534.6,
+    "trust_assets": 126840.6,
     "allowance_tal": 437.5,
     "borrowings": 1306.5,
     "ncr": 697.66,
@@ -1244,7 +1310,8 @@
     "net_income_ttm": -124.8,
     "operating_revenue_ttm": 568.8,
     "roa_ttm": -4.0,
-    "roe_ttm": -7.89
+    "roe_ttm": -7.89,
+    "trust_share": 2.18
    },
    "2025Q4": {
     "total_liabilities": 1408.2,
@@ -1263,6 +1330,7 @@
     "operating_revenue": 149.5,
     "trust_fee": 66.7,
     "trust_account_loan": 2265.7,
+    "trust_assets": 137864.4,
     "allowance_tal": 480.5,
     "borrowings": 1196.6,
     "ncr": 795.31,
@@ -1279,7 +1347,8 @@
     "net_income_ttm": 78.2,
     "operating_revenue_ttm": 607.4,
     "roa_ttm": 2.63,
-    "roe_ttm": 5.0
+    "roe_ttm": 5.0,
+    "trust_share": 2.34
    },
    "2026Q1": {
     "total_liabilities": 1807.9,
@@ -1298,6 +1367,7 @@
     "operating_revenue": 132.4,
     "trust_fee": 57.5,
     "trust_account_loan": 2304.9,
+    "trust_assets": 148090.6,
     "allowance_tal": 480.0,
     "borrowings": 1552.9,
     "ncr": 582.9,
@@ -1314,7 +1384,8 @@
     "net_income_ttm": 50.4,
     "operating_revenue_ttm": 543.6,
     "roa_ttm": 1.49,
-    "roe_ttm": 3.18
+    "roe_ttm": 3.18,
+    "trust_share": 2.51
    },
    "2026Q2": {
     "total_liabilities": 1794.8,
@@ -1333,6 +1404,7 @@
     "operating_revenue": 157.4,
     "trust_fee": 69.7,
     "trust_account_loan": 2415.6,
+    "trust_assets": 151710.3,
     "allowance_tal": 481.1,
     "borrowings": 1518.2,
     "ncr": 715.42,
@@ -1349,7 +1421,8 @@
     "net_income_ttm": 71.8,
     "operating_revenue_ttm": 579.4,
     "roa_ttm": 2.11,
-    "roe_ttm": 4.46
+    "roe_ttm": 4.46,
+    "trust_share": 2.55
    }
   },
   "0010904": {
@@ -1370,6 +1443,7 @@
     "operating_revenue": 304.4,
     "trust_fee": 136.2,
     "trust_account_loan": 6601.8,
+    "trust_assets": 219916.3,
     "allowance_tal": 1051.0,
     "borrowings": 2643.3,
     "ncr": 870.16,
@@ -1386,7 +1460,8 @@
     "net_income_ttm": 150.9,
     "operating_revenue_ttm": 979.2,
     "roa_ttm": 2.08,
-    "roe_ttm": 3.85
+    "roe_ttm": 3.85,
+    "trust_share": 4.07
    },
    "2023Q4": {
     "total_liabilities": 3758.7,
@@ -1405,6 +1480,7 @@
     "operating_revenue": 333.7,
     "trust_fee": 122.0,
     "trust_account_loan": 7523.3,
+    "trust_assets": 225653.4,
     "allowance_tal": 1179.3,
     "borrowings": 3376.8,
     "ncr": 893.53,
@@ -1421,7 +1497,8 @@
     "net_income_ttm": 148.9,
     "operating_revenue_ttm": 1101.0,
     "roa_ttm": 1.94,
-    "roe_ttm": 3.79
+    "roe_ttm": 3.79,
+    "trust_share": 4.18
    },
    "2024Q1": {
     "total_liabilities": 4664.2,
@@ -1440,6 +1517,7 @@
     "operating_revenue": 295.8,
     "trust_fee": 118.7,
     "trust_account_loan": 8322.7,
+    "trust_assets": 231058.4,
     "allowance_tal": 1248.6,
     "borrowings": 4315.2,
     "ncr": 784.05,
@@ -1456,7 +1534,8 @@
     "net_income_ttm": 191.9,
     "operating_revenue_ttm": 1175.7,
     "roa_ttm": 2.22,
-    "roe_ttm": 4.81
+    "roe_ttm": 4.81,
+    "trust_share": 4.25
    },
    "2024Q2": {
     "total_liabilities": 5255.4,
@@ -1475,6 +1554,7 @@
     "operating_revenue": 353.0,
     "trust_fee": 110.0,
     "trust_account_loan": 8668.7,
+    "trust_assets": 231697.6,
     "allowance_tal": 1251.1,
     "borrowings": 4730.5,
     "ncr": 800.05,
@@ -1491,7 +1571,8 @@
     "net_income_ttm": 125.6,
     "operating_revenue_ttm": 1286.9,
     "roa_ttm": 1.36,
-    "roe_ttm": 3.16
+    "roe_ttm": 3.16,
+    "trust_share": 4.23
    },
    "2024Q3": {
     "total_liabilities": 5932.9,
@@ -1510,6 +1591,7 @@
     "operating_revenue": 282.8,
     "trust_fee": 86.7,
     "trust_account_loan": 9048.0,
+    "trust_assets": 243604.0,
     "allowance_tal": 1250.5,
     "borrowings": 5371.5,
     "ncr": 722.28,
@@ -1526,7 +1608,8 @@
     "net_income_ttm": 120.5,
     "operating_revenue_ttm": 1265.3,
     "roa_ttm": 1.21,
-    "roe_ttm": 2.98
+    "roe_ttm": 2.98,
+    "trust_share": 4.3
    },
    "2024Q4": {
     "total_liabilities": 5916.7,
@@ -1545,6 +1628,7 @@
     "operating_revenue": 456.5,
     "trust_fee": 97.9,
     "trust_account_loan": 9603.6,
+    "trust_assets": 258592.0,
     "allowance_tal": 1213.0,
     "borrowings": 5374.5,
     "ncr": 860.04,
@@ -1561,7 +1645,8 @@
     "net_income_ttm": 279.6,
     "operating_revenue_ttm": 1388.1,
     "roa_ttm": 2.76,
-    "roe_ttm": 6.63
+    "roe_ttm": 6.63,
+    "trust_share": 4.51
    },
    "2025Q1": {
     "total_liabilities": 5771.9,
@@ -1580,6 +1665,7 @@
     "operating_revenue": 305.7,
     "trust_fee": 84.9,
     "trust_account_loan": 9571.3,
+    "trust_assets": 273102.4,
     "allowance_tal": 1350.9,
     "borrowings": 5420.1,
     "ncr": 869.29,
@@ -1596,7 +1682,8 @@
     "net_income_ttm": 296.9,
     "operating_revenue_ttm": 1398.0,
     "roa_ttm": 2.95,
-    "roe_ttm": 6.91
+    "roe_ttm": 6.91,
+    "trust_share": 4.76
    },
    "2025Q2": {
     "total_liabilities": 5826.6,
@@ -1615,6 +1702,7 @@
     "operating_revenue": 354.4,
     "trust_fee": 134.7,
     "trust_account_loan": 9594.7,
+    "trust_assets": 271701.7,
     "allowance_tal": 1378.0,
     "borrowings": 5529.8,
     "ncr": 833.86,
@@ -1631,7 +1719,8 @@
     "net_income_ttm": 406.8,
     "operating_revenue_ttm": 1399.4,
     "roa_ttm": 3.98,
-    "roe_ttm": 9.28
+    "roe_ttm": 9.28,
+    "trust_share": 4.67
    },
    "2025Q3": {
     "total_liabilities": 6444.1,
@@ -1650,6 +1739,7 @@
     "operating_revenue": 270.9,
     "trust_fee": 59.8,
     "trust_account_loan": 10171.2,
+    "trust_assets": 272263.2,
     "allowance_tal": 1658.0,
     "borrowings": 6155.5,
     "ncr": 715.94,
@@ -1666,7 +1756,8 @@
     "net_income_ttm": 201.2,
     "operating_revenue_ttm": 1387.5,
     "roa_ttm": 1.88,
-    "roe_ttm": 4.73
+    "roe_ttm": 4.73,
+    "trust_share": 4.67
    },
    "2025Q4": {
     "total_liabilities": 7126.5,
@@ -1685,6 +1776,7 @@
     "operating_revenue": 527.8,
     "trust_fee": 94.8,
     "trust_account_loan": 10777.2,
+    "trust_assets": 278540.2,
     "allowance_tal": 1923.0,
     "borrowings": 6747.6,
     "ncr": 722.46,
@@ -1701,7 +1793,8 @@
     "net_income_ttm": 12.4,
     "operating_revenue_ttm": 1458.8,
     "roa_ttm": 0.1,
-    "roe_ttm": 0.24
+    "roe_ttm": 0.24,
+    "trust_share": 4.72
    },
    "2026Q1": {
     "total_liabilities": 6937.2,
@@ -1720,6 +1813,7 @@
     "operating_revenue": 279.5,
     "trust_fee": 76.7,
     "trust_account_loan": 10984.6,
+    "trust_assets": 280924.7,
     "allowance_tal": 2000.8,
     "borrowings": 6580.0,
     "ncr": 667.07,
@@ -1736,7 +1830,8 @@
     "net_income_ttm": -32.0,
     "operating_revenue_ttm": 1432.6,
     "roa_ttm": -0.26,
-    "roe_ttm": -0.61
+    "roe_ttm": -0.61,
+    "trust_share": 4.75
    },
    "2026Q2": {
     "total_liabilities": 6646.5,
@@ -1755,6 +1850,7 @@
     "operating_revenue": 257.7,
     "trust_fee": 60.4,
     "trust_account_loan": 10623.0,
+    "trust_assets": 282888.6,
     "allowance_tal": 2884.2,
     "borrowings": 6288.6,
     "ncr": 543.14,
@@ -1771,7 +1867,8 @@
     "net_income_ttm": -671.9,
     "operating_revenue_ttm": 1335.9,
     "roa_ttm": -5.94,
-    "roe_ttm": -14.39
+    "roe_ttm": -14.39,
+    "trust_share": 4.75
    }
   },
   "0012279": {
@@ -1792,6 +1889,7 @@
     "operating_revenue": 285.7,
     "trust_fee": 210.8,
     "trust_account_loan": 2314.7,
+    "trust_assets": 654561.6,
     "allowance_tal": 192.3,
     "borrowings": 1262.9,
     "ncr": 253.41,
@@ -1808,7 +1906,8 @@
     "net_income_ttm": 120.4,
     "operating_revenue_ttm": 1266.9,
     "roa_ttm": 2.57,
-    "roe_ttm": 4.74
+    "roe_ttm": 4.74,
+    "trust_share": 12.12
    },
    "2023Q4": {
     "total_liabilities": 2189.7,
@@ -1827,6 +1926,7 @@
     "operating_revenue": 310.9,
     "trust_fee": 207.4,
     "trust_account_loan": 2465.0,
+    "trust_assets": 658861.9,
     "allowance_tal": 221.7,
     "borrowings": 1384.8,
     "ncr": 387.99,
@@ -1843,7 +1943,8 @@
     "net_income_ttm": -60.4,
     "operating_revenue_ttm": 1250.6,
     "roa_ttm": -1.23,
-    "roe_ttm": -2.23
+    "roe_ttm": -2.23,
+    "trust_share": 12.21
    },
    "2024Q1": {
     "total_liabilities": 2565.6,
@@ -1862,6 +1963,7 @@
     "operating_revenue": 248.1,
     "trust_fee": 166.2,
     "trust_account_loan": 2452.5,
+    "trust_assets": 664503.6,
     "allowance_tal": 227.1,
     "borrowings": 1655.5,
     "ncr": 384.62,
@@ -1878,7 +1980,8 @@
     "net_income_ttm": -161.1,
     "operating_revenue_ttm": 1168.5,
     "roa_ttm": -3.09,
-    "roe_ttm": -6.09
+    "roe_ttm": -6.09,
+    "trust_share": 12.22
    },
    "2024Q2": {
     "total_liabilities": 1990.6,
@@ -1897,6 +2000,7 @@
     "operating_revenue": 291.6,
     "trust_fee": 156.7,
     "trust_account_loan": 2486.5,
+    "trust_assets": 669924.4,
     "allowance_tal": 284.1,
     "borrowings": 1267.9,
     "ncr": 306.32,
@@ -1913,7 +2017,8 @@
     "net_income_ttm": -133.3,
     "operating_revenue_ttm": 1136.3,
     "roa_ttm": -2.95,
-    "roe_ttm": -5.26
+    "roe_ttm": -5.26,
+    "trust_share": 12.23
    },
    "2024Q3": {
     "total_liabilities": 2297.8,
@@ -1932,6 +2037,7 @@
     "operating_revenue": 205.6,
     "trust_fee": 119.1,
     "trust_account_loan": 2808.6,
+    "trust_assets": 676854.1,
     "allowance_tal": 314.2,
     "borrowings": 1540.1,
     "ncr": 68.75,
@@ -1948,7 +2054,8 @@
     "net_income_ttm": -290.1,
     "operating_revenue_ttm": 1056.2,
     "roa_ttm": -6.14,
-    "roe_ttm": -11.96
+    "roe_ttm": -11.96,
+    "trust_share": 11.94
    },
    "2024Q4": {
     "total_liabilities": 2318.3,
@@ -1967,6 +2074,7 @@
     "operating_revenue": 208.6,
     "trust_fee": 117.0,
     "trust_account_loan": 2904.7,
+    "trust_assets": 676144.8,
     "allowance_tal": 897.5,
     "borrowings": 1493.3,
     "ncr": -195.56,
@@ -1983,7 +2091,8 @@
     "net_income_ttm": -1371.2,
     "operating_revenue_ttm": 953.9,
     "roa_ttm": -39.15,
-    "roe_ttm": -115.8
+    "roe_ttm": -115.8,
+    "trust_share": 11.79
    },
    "2025Q1": {
     "total_liabilities": 2179.0,
@@ -2002,6 +2111,7 @@
     "operating_revenue": 174.5,
     "trust_fee": 62.1,
     "trust_account_loan": 2787.3,
+    "trust_assets": 663752.9,
     "allowance_tal": 961.9,
     "borrowings": 1373.8,
     "ncr": -264.75,
@@ -2018,7 +2128,8 @@
     "net_income_ttm": -1372.9,
     "operating_revenue_ttm": 880.3,
     "roa_ttm": -41.56,
-    "roe_ttm": -122.13
+    "roe_ttm": -122.13,
+    "trust_share": 11.58
    },
    "2025Q2": {
     "total_liabilities": 2162.3,
@@ -2037,6 +2148,7 @@
     "operating_revenue": 196.2,
     "trust_fee": 65.1,
     "trust_account_loan": 2787.7,
+    "trust_assets": 622318.3,
     "allowance_tal": 1040.3,
     "borrowings": 1287.9,
     "ncr": -376.86,
@@ -2053,7 +2165,8 @@
     "net_income_ttm": -1821.6,
     "operating_revenue_ttm": 784.9,
     "roa_ttm": -64.16,
-    "roe_ttm": -269.07
+    "roe_ttm": -269.07,
+    "trust_share": 10.7
    },
    "2025Q3": {
     "total_liabilities": 2073.7,
@@ -2072,6 +2185,7 @@
     "operating_revenue": 165.2,
     "trust_fee": 75.0,
     "trust_account_loan": 2743.3,
+    "trust_assets": 575751.2,
     "allowance_tal": 1103.8,
     "borrowings": 1176.4,
     "ncr": -438.86,
@@ -2088,7 +2202,8 @@
     "net_income_ttm": -1859.1,
     "operating_revenue_ttm": 744.5,
     "roa_ttm": -71.38,
-    "roe_ttm": -350.31
+    "roe_ttm": -350.31,
+    "trust_share": 9.88
    },
    "2025Q4": {
     "total_liabilities": 1987.2,
@@ -2107,6 +2222,7 @@
     "operating_revenue": 178.8,
     "trust_fee": 95.9,
     "trust_account_loan": 2769.4,
+    "trust_assets": 579748.0,
     "allowance_tal": 1319.5,
     "borrowings": 1153.7,
     "ncr": -880.3,
@@ -2123,7 +2239,8 @@
     "net_income_ttm": -1037.1,
     "operating_revenue_ttm": 714.7,
     "roa_ttm": -48.59,
-    "roe_ttm": -705.03
+    "roe_ttm": -705.03,
+    "trust_share": 9.83
    },
    "2026Q1": {
     "total_liabilities": 1919.4,
@@ -2142,6 +2259,7 @@
     "operating_revenue": 236.2,
     "trust_fee": 58.9,
     "trust_account_loan": 2740.1,
+    "trust_assets": 559064.2,
     "allowance_tal": 1330.8,
     "borrowings": 1141.3,
     "ncr": -681.4,
@@ -2158,7 +2276,8 @@
     "net_income_ttm": -871.7,
     "operating_revenue_ttm": 776.4,
     "roa_ttm": -40.14,
-    "roe_ttm": -345.23
+    "roe_ttm": -345.23,
+    "trust_share": 9.46
    },
    "2026Q2": {
     "total_liabilities": 1940.2,
@@ -2177,6 +2296,7 @@
     "operating_revenue": 146.1,
     "trust_fee": 65.9,
     "trust_account_loan": 2783.9,
+    "trust_assets": 517004.8,
     "allowance_tal": 1341.9,
     "borrowings": 1140.2,
     "ncr": -1008.65,
@@ -2193,7 +2313,8 @@
     "net_income_ttm": -538.3,
     "operating_revenue_ttm": 726.3,
     "roa_ttm": -25.89,
-    "roe_ttm": -388.1
+    "roe_ttm": -388.1,
+    "trust_share": 8.68
    }
   },
   "0017107": {
@@ -2214,6 +2335,7 @@
     "operating_revenue": 109.0,
     "trust_fee": 81.0,
     "trust_account_loan": 116.3,
+    "trust_assets": 214049.1,
     "allowance_tal": 6.9,
     "borrowings": 0.0,
     "ncr": 1318.19,
@@ -2230,7 +2352,8 @@
     "net_income_ttm": 164.9,
     "operating_revenue_ttm": 467.4,
     "roa_ttm": 11.0,
-    "roe_ttm": 12.66
+    "roe_ttm": 12.66,
+    "trust_share": 3.96
    },
    "2023Q4": {
     "total_liabilities": 233.2,
@@ -2249,6 +2372,7 @@
     "operating_revenue": 115.1,
     "trust_fee": 82.6,
     "trust_account_loan": 131.2,
+    "trust_assets": 221730.5,
     "allowance_tal": 12.7,
     "borrowings": 0.0,
     "ncr": 1228.95,
@@ -2265,7 +2389,8 @@
     "net_income_ttm": 153.1,
     "operating_revenue_ttm": 451.1,
     "roa_ttm": 9.71,
-    "roe_ttm": 11.4
+    "roe_ttm": 11.4,
+    "trust_share": 4.11
    },
    "2024Q1": {
     "total_liabilities": 238.6,
@@ -2284,6 +2409,7 @@
     "operating_revenue": 107.4,
     "trust_fee": 76.3,
     "trust_account_loan": 190.0,
+    "trust_assets": 223310.2,
     "allowance_tal": 34.1,
     "borrowings": 0.0,
     "ncr": 1270.42,
@@ -2300,7 +2426,8 @@
     "net_income_ttm": 125.3,
     "operating_revenue_ttm": 444.7,
     "roa_ttm": 7.9,
-    "roe_ttm": 9.3
+    "roe_ttm": 9.3,
+    "trust_share": 4.1
    },
    "2024Q2": {
     "total_liabilities": 207.6,
@@ -2319,6 +2446,7 @@
     "operating_revenue": 106.4,
     "trust_fee": 77.5,
     "trust_account_loan": 380.2,
+    "trust_assets": 225629.7,
     "allowance_tal": 37.3,
     "borrowings": 0.0,
     "ncr": 1442.18,
@@ -2335,7 +2463,8 @@
     "net_income_ttm": 116.3,
     "operating_revenue_ttm": 437.9,
     "roa_ttm": 7.57,
-    "roe_ttm": 8.75
+    "roe_ttm": 8.75,
+    "trust_share": 4.12
    },
    "2024Q3": {
     "total_liabilities": 197.4,
@@ -2354,6 +2483,7 @@
     "operating_revenue": 98.5,
     "trust_fee": 71.1,
     "trust_account_loan": 332.8,
+    "trust_assets": 234662.2,
     "allowance_tal": 42.8,
     "borrowings": 0.0,
     "ncr": 1397.78,
@@ -2370,7 +2500,8 @@
     "net_income_ttm": 102.5,
     "operating_revenue_ttm": 427.4,
     "roa_ttm": 6.6,
-    "roe_ttm": 7.57
+    "roe_ttm": 7.57,
+    "trust_share": 4.14
    },
    "2024Q4": {
     "total_liabilities": 200.2,
@@ -2389,6 +2520,7 @@
     "operating_revenue": 90.9,
     "trust_fee": 62.9,
     "trust_account_loan": 382.5,
+    "trust_assets": 237583.5,
     "allowance_tal": 47.1,
     "borrowings": 0.0,
     "ncr": 1396.66,
@@ -2405,7 +2537,8 @@
     "net_income_ttm": 85.8,
     "operating_revenue_ttm": 403.2,
     "roa_ttm": 5.43,
-    "roe_ttm": 6.22
+    "roe_ttm": 6.22,
+    "trust_share": 4.14
    },
    "2025Q1": {
     "total_liabilities": 263.8,
@@ -2424,6 +2557,7 @@
     "operating_revenue": 85.2,
     "trust_fee": 56.6,
     "trust_account_loan": 505.1,
+    "trust_assets": 243179.4,
     "allowance_tal": 56.0,
     "borrowings": 0.0,
     "ncr": 1477.18,
@@ -2440,7 +2574,8 @@
     "net_income_ttm": 73.1,
     "operating_revenue_ttm": 381.0,
     "roa_ttm": 4.47,
-    "roe_ttm": 5.33
+    "roe_ttm": 5.33,
+    "trust_share": 4.24
    },
    "2025Q2": {
     "total_liabilities": 288.9,
@@ -2459,6 +2594,7 @@
     "operating_revenue": 90.9,
     "trust_fee": 54.0,
     "trust_account_loan": 760.1,
+    "trust_assets": 269204.8,
     "allowance_tal": 70.4,
     "borrowings": 50.0,
     "ncr": 1331.35,
@@ -2475,7 +2611,8 @@
     "net_income_ttm": 54.5,
     "operating_revenue_ttm": 365.5,
     "roa_ttm": 3.36,
-    "roe_ttm": 4.09
+    "roe_ttm": 4.09,
+    "trust_share": 4.63
    },
    "2025Q3": {
     "total_liabilities": 304.3,
@@ -2494,6 +2631,7 @@
     "operating_revenue": 95.3,
     "trust_fee": 58.2,
     "trust_account_loan": 859.2,
+    "trust_assets": 288594.2,
     "allowance_tal": 113.7,
     "borrowings": 50.0,
     "ncr": 1325.85,
@@ -2510,7 +2648,8 @@
     "net_income_ttm": 22.4,
     "operating_revenue_ttm": 362.3,
     "roa_ttm": 1.37,
-    "roe_ttm": 1.69
+    "roe_ttm": 1.69,
+    "trust_share": 4.95
    },
    "2025Q4": {
     "total_liabilities": 336.9,
@@ -2529,6 +2668,7 @@
     "operating_revenue": 95.4,
     "trust_fee": 67.5,
     "trust_account_loan": 1084.1,
+    "trust_assets": 302344.8,
     "allowance_tal": 129.2,
     "borrowings": 50.0,
     "ncr": 1224.96,
@@ -2545,7 +2685,8 @@
     "net_income_ttm": 14.1,
     "operating_revenue_ttm": 366.8,
     "roa_ttm": 0.84,
-    "roe_ttm": 1.05
+    "roe_ttm": 1.05,
+    "trust_share": 5.13
    },
    "2026Q1": {
     "total_liabilities": 364.4,
@@ -2564,6 +2705,7 @@
     "operating_revenue": 94.4,
     "trust_fee": 65.1,
     "trust_account_loan": 1240.5,
+    "trust_assets": 316356.6,
     "allowance_tal": 151.4,
     "borrowings": 50.0,
     "ncr": 1811.04,
@@ -2580,7 +2722,8 @@
     "net_income_ttm": 28.7,
     "operating_revenue_ttm": 376.0,
     "roa_ttm": 1.3,
-    "roe_ttm": 1.55
+    "roe_ttm": 1.55,
+    "trust_share": 5.35
    },
    "2026Q2": {
     "total_liabilities": 602.4,
@@ -2599,6 +2742,7 @@
     "operating_revenue": 128.2,
     "trust_fee": 83.2,
     "trust_account_loan": 1826.6,
+    "trust_assets": 331368.8,
     "allowance_tal": 194.2,
     "borrowings": 300.0,
     "ncr": 1428.7,
@@ -2615,7 +2759,8 @@
     "net_income_ttm": 30.0,
     "operating_revenue_ttm": 413.3,
     "roa_ttm": 1.22,
-    "roe_ttm": 1.61
+    "roe_ttm": 1.61,
+    "trust_share": 5.56
    }
   },
   "0011877": {
@@ -2636,6 +2781,7 @@
     "operating_revenue": 385.2,
     "trust_fee": 290.8,
     "trust_account_loan": 1423.3,
+    "trust_assets": 703753.3,
     "allowance_tal": 145.0,
     "borrowings": 0.0,
     "ncr": 996.54,
@@ -2652,7 +2798,8 @@
     "net_income_ttm": 749.1,
     "operating_revenue_ttm": 1505.0,
     "roa_ttm": 16.25,
-    "roe_ttm": 19.67
+    "roe_ttm": 19.67,
+    "trust_share": 13.04
    },
    "2023Q4": {
     "total_liabilities": 855.6,
@@ -2671,6 +2818,7 @@
     "operating_revenue": 355.6,
     "trust_fee": 215.5,
     "trust_account_loan": 2095.3,
+    "trust_assets": 680738.5,
     "allowance_tal": 208.6,
     "borrowings": 0.0,
     "ncr": 926.76,
@@ -2687,7 +2835,8 @@
     "net_income_ttm": 534.2,
     "operating_revenue_ttm": 1489.8,
     "roa_ttm": 11.53,
-    "roe_ttm": 14.14
+    "roe_ttm": 14.14,
+    "trust_share": 12.61
    },
    "2024Q1": {
     "total_liabilities": 1940.3,
@@ -2706,6 +2855,7 @@
     "operating_revenue": 278.7,
     "trust_fee": 189.4,
     "trust_account_loan": 3110.7,
+    "trust_assets": 689372.0,
     "allowance_tal": 571.7,
     "borrowings": 1000.0,
     "ncr": 877.52,
@@ -2722,7 +2872,8 @@
     "net_income_ttm": 136.3,
     "operating_revenue_ttm": 1426.0,
     "roa_ttm": 2.48,
-    "roe_ttm": 3.83
+    "roe_ttm": 3.83,
+    "trust_share": 12.67
    },
    "2024Q2": {
     "total_liabilities": 3156.2,
@@ -2741,6 +2892,7 @@
     "operating_revenue": 261.1,
     "trust_fee": 175.2,
     "trust_account_loan": 4285.3,
+    "trust_assets": 662680.7,
     "allowance_tal": 1486.3,
     "borrowings": 1500.0,
     "ncr": 413.69,
@@ -2757,7 +2909,8 @@
     "net_income_ttm": -1600.0,
     "operating_revenue_ttm": 1280.6,
     "roa_ttm": -25.9,
-    "roe_ttm": -52.96
+    "roe_ttm": -52.96,
+    "trust_share": 12.1
    },
    "2024Q3": {
     "total_liabilities": 4150.4,
@@ -2776,6 +2929,7 @@
     "operating_revenue": 261.7,
     "trust_fee": 169.2,
     "trust_account_loan": 5666.4,
+    "trust_assets": 674836.9,
     "allowance_tal": 1832.3,
     "borrowings": 2810.9,
     "ncr": 204.31,
@@ -2792,7 +2946,8 @@
     "net_income_ttm": -1813.7,
     "operating_revenue_ttm": 1157.1,
     "roa_ttm": -25.46,
-    "roe_ttm": -60.98
+    "roe_ttm": -60.98,
+    "trust_share": 11.91
    },
    "2024Q4": {
     "total_liabilities": 4718.9,
@@ -2811,6 +2966,7 @@
     "operating_revenue": 204.8,
     "trust_fee": 94.7,
     "trust_account_loan": 6951.4,
+    "trust_assets": 651588.7,
     "allowance_tal": 2269.6,
     "borrowings": 2785.8,
     "ncr": 519.14,
@@ -2827,7 +2983,8 @@
     "net_income_ttm": -3206.0,
     "operating_revenue_ttm": 1006.3,
     "roa_ttm": -41.32,
-    "roe_ttm": -105.48
+    "roe_ttm": -105.48,
+    "trust_share": 11.36
    },
    "2025Q1": {
     "total_liabilities": 4568.4,
@@ -2846,6 +3003,7 @@
     "operating_revenue": 299.5,
     "trust_fee": 103.5,
     "trust_account_loan": 7257.6,
+    "trust_assets": 605265.5,
     "allowance_tal": 2394.3,
     "borrowings": 2760.3,
     "ncr": 1173.2,
@@ -2862,7 +3020,8 @@
     "net_income_ttm": -2931.3,
     "operating_revenue_ttm": 1027.1,
     "roa_ttm": -38.34,
-    "roe_ttm": -95.27
+    "roe_ttm": -95.27,
+    "trust_share": 10.56
    },
    "2025Q2": {
     "total_liabilities": 4995.5,
@@ -2881,6 +3040,7 @@
     "operating_revenue": 480.1,
     "trust_fee": 137.7,
     "trust_account_loan": 8396.6,
+    "trust_assets": 582843.0,
     "allowance_tal": 2761.1,
     "borrowings": 3344.0,
     "ncr": 1032.47,
@@ -2897,7 +3057,8 @@
     "net_income_ttm": -1333.0,
     "operating_revenue_ttm": 1246.1,
     "roa_ttm": -16.41,
-    "roe_ttm": -42.64
+    "roe_ttm": -42.64,
+    "trust_share": 10.02
    },
    "2025Q3": {
     "total_liabilities": 5060.0,
@@ -2916,6 +3077,7 @@
     "operating_revenue": 794.5,
     "trust_fee": 193.0,
     "trust_account_loan": 10086.2,
+    "trust_assets": 585844.0,
     "allowance_tal": 3255.9,
     "borrowings": 3815.3,
     "ncr": 854.86,
@@ -2932,7 +3094,8 @@
     "net_income_ttm": -1226.8,
     "operating_revenue_ttm": 1778.9,
     "roa_ttm": -14.88,
-    "roe_ttm": -38.55
+    "roe_ttm": -38.55,
+    "trust_share": 10.06
    },
    "2025Q4": {
     "total_liabilities": 5647.3,
@@ -2951,6 +3114,7 @@
     "operating_revenue": 395.3,
     "trust_fee": 124.4,
     "trust_account_loan": 10421.6,
+    "trust_assets": 539131.8,
     "allowance_tal": 3425.5,
     "borrowings": 4449.3,
     "ncr": 443.46,
@@ -2967,7 +3131,8 @@
     "net_income_ttm": 196.5,
     "operating_revenue_ttm": 1969.4,
     "roa_ttm": 2.23,
-    "roe_ttm": 6.2
+    "roe_ttm": 6.2,
+    "trust_share": 9.15
    },
    "2026Q1": {
     "total_liabilities": 7004.5,
@@ -2986,6 +3151,7 @@
     "operating_revenue": 233.5,
     "trust_fee": 103.4,
     "trust_account_loan": 12008.9,
+    "trust_assets": 517373.7,
     "allowance_tal": 3694.1,
     "borrowings": 6080.9,
     "ncr": 660.76,
@@ -3002,7 +3168,8 @@
     "net_income_ttm": 200.8,
     "operating_revenue_ttm": 1903.4,
     "roa_ttm": 1.79,
-    "roe_ttm": 4.78
+    "roe_ttm": 4.78,
+    "trust_share": 8.75
    },
    "2026Q2": {
     "total_liabilities": 5832.4,
@@ -3021,6 +3188,7 @@
     "operating_revenue": 481.2,
     "trust_fee": 371.5,
     "trust_account_loan": 11832.2,
+    "trust_assets": 530264.5,
     "allowance_tal": 3936.0,
     "borrowings": 5188.7,
     "ncr": 793.13,
@@ -3037,7 +3205,8 @@
     "net_income_ttm": 376.7,
     "operating_revenue_ttm": 1904.5,
     "roa_ttm": 3.68,
-    "roe_ttm": 8.53
+    "roe_ttm": 8.53,
+    "trust_share": 8.91
    }
   },
   "0011892": {
@@ -3058,6 +3227,7 @@
     "operating_revenue": 323.3,
     "trust_fee": 254.1,
     "trust_account_loan": 782.7,
+    "trust_assets": 788566.1,
     "allowance_tal": 90.3,
     "borrowings": 0.0,
     "ncr": 1290.46,
@@ -3074,7 +3244,8 @@
     "net_income_ttm": 577.1,
     "operating_revenue_ttm": 1359.7,
     "roa_ttm": 16.84,
-    "roe_ttm": 20.67
+    "roe_ttm": 20.67,
+    "trust_share": 14.61
    },
    "2023Q4": {
     "total_liabilities": 797.5,
@@ -3093,6 +3264,7 @@
     "operating_revenue": 288.8,
     "trust_fee": 213.9,
     "trust_account_loan": 1035.6,
+    "trust_assets": 816525.9,
     "allowance_tal": 233.7,
     "borrowings": 0.0,
     "ncr": 1284.26,
@@ -3109,7 +3281,8 @@
     "net_income_ttm": 323.0,
     "operating_revenue_ttm": 1299.9,
     "roa_ttm": 9.56,
-    "roe_ttm": 12.51
+    "roe_ttm": 12.51,
+    "trust_share": 15.13
    },
    "2024Q1": {
     "total_liabilities": 749.1,
@@ -3128,6 +3301,7 @@
     "operating_revenue": 255.0,
     "trust_fee": 151.7,
     "trust_account_loan": 1173.6,
+    "trust_assets": 820296.6,
     "allowance_tal": 276.5,
     "borrowings": 0.0,
     "ncr": 2945.88,
@@ -3144,7 +3318,8 @@
     "net_income_ttm": 226.0,
     "operating_revenue_ttm": 1222.6,
     "roa_ttm": 4.18,
-    "roe_ttm": 4.85
+    "roe_ttm": 4.85,
+    "trust_share": 15.08
    },
    "2024Q2": {
     "total_liabilities": 570.5,
@@ -3163,6 +3338,7 @@
     "operating_revenue": 327.6,
     "trust_fee": 178.5,
     "trust_account_loan": 1678.8,
+    "trust_assets": 852575.9,
     "allowance_tal": 486.4,
     "borrowings": 0.0,
     "ncr": 3219.51,
@@ -3179,7 +3355,8 @@
     "net_income_ttm": 29.1,
     "operating_revenue_ttm": 1194.7,
     "roa_ttm": 0.56,
-    "roe_ttm": 0.62
+    "roe_ttm": 0.62,
+    "trust_share": 15.57
    },
    "2024Q3": {
     "total_liabilities": 453.2,
@@ -3198,6 +3375,7 @@
     "operating_revenue": 389.4,
     "trust_fee": 178.2,
     "trust_account_loan": 2163.7,
+    "trust_assets": 935337.7,
     "allowance_tal": 624.8,
     "borrowings": 0.0,
     "ncr": 3564.66,
@@ -3214,7 +3392,8 @@
     "net_income_ttm": -32.5,
     "operating_revenue_ttm": 1260.8,
     "roa_ttm": -0.62,
-    "roe_ttm": -0.68
+    "roe_ttm": -0.68,
+    "trust_share": 16.5
    },
    "2024Q4": {
     "total_liabilities": 394.7,
@@ -3233,6 +3412,7 @@
     "operating_revenue": 99.5,
     "trust_fee": 97.2,
     "trust_account_loan": 2601.0,
+    "trust_assets": 987178.0,
     "allowance_tal": 958.2,
     "borrowings": 0.0,
     "ncr": 4057.29,
@@ -3249,7 +3429,8 @@
     "net_income_ttm": 18.0,
     "operating_revenue_ttm": 1071.5,
     "roa_ttm": 0.36,
-    "roe_ttm": 0.39
+    "roe_ttm": 0.39,
+    "trust_share": 17.21
    },
    "2025Q1": {
     "total_liabilities": 350.7,
@@ -3268,6 +3449,7 @@
     "operating_revenue": 217.7,
     "trust_fee": 92.5,
     "trust_account_loan": 2994.7,
+    "trust_assets": 986864.1,
     "allowance_tal": 1216.2,
     "borrowings": 0.0,
     "ncr": 4416.31,
@@ -3284,7 +3466,8 @@
     "net_income_ttm": -199.7,
     "operating_revenue_ttm": 1034.2,
     "roa_ttm": -4.15,
-    "roe_ttm": -4.48
+    "roe_ttm": -4.48,
+    "trust_share": 17.21
    },
    "2025Q2": {
     "total_liabilities": 494.7,
@@ -3303,6 +3486,7 @@
     "operating_revenue": 177.4,
     "trust_fee": 113.8,
     "trust_account_loan": 3025.9,
+    "trust_assets": 1025815.5,
     "allowance_tal": 1278.1,
     "borrowings": 0.0,
     "ncr": 8498.36,
@@ -3319,7 +3503,8 @@
     "net_income_ttm": -972.1,
     "operating_revenue_ttm": 884.0,
     "roa_ttm": -23.19,
-    "roe_ttm": -26.29
+    "roe_ttm": -26.29,
+    "trust_share": 17.64
    },
    "2025Q3": {
     "total_liabilities": 437.0,
@@ -3338,6 +3523,7 @@
     "operating_revenue": 221.3,
     "trust_fee": 137.9,
     "trust_account_loan": 2897.4,
+    "trust_assets": 1033653.8,
     "allowance_tal": 2117.3,
     "borrowings": 0.0,
     "ncr": 4835.32,
@@ -3354,7 +3540,8 @@
     "net_income_ttm": -1966.1,
     "operating_revenue_ttm": 715.9,
     "roa_ttm": -60.98,
-    "roe_ttm": -70.54
+    "roe_ttm": -70.54,
+    "trust_share": 17.75
    },
    "2025Q4": {
     "total_liabilities": 633.1,
@@ -3373,6 +3560,7 @@
     "operating_revenue": 148.5,
     "trust_fee": 90.1,
     "trust_account_loan": 1267.1,
+    "trust_assets": 1043284.5,
     "allowance_tal": 543.2,
     "borrowings": 0.0,
     "ncr": 4610.35,
@@ -3389,7 +3577,8 @@
     "net_income_ttm": -2206.2,
     "operating_revenue_ttm": 764.9,
     "roa_ttm": -72.89,
-    "roe_ttm": -92.17
+    "roe_ttm": -92.17,
+    "trust_share": 17.7
    },
    "2026Q1": {
     "total_liabilities": 639.1,
@@ -3408,6 +3597,7 @@
     "operating_revenue": 164.2,
     "trust_fee": 96.6,
     "trust_account_loan": 1297.2,
+    "trust_assets": 1040076.2,
     "allowance_tal": 550.8,
     "borrowings": 0.0,
     "ncr": 4357.83,
@@ -3424,7 +3614,8 @@
     "net_income_ttm": -2022.7,
     "operating_revenue_ttm": 711.4,
     "roa_ttm": -65.69,
-    "roe_ttm": -82.89
+    "roe_ttm": -82.89,
+    "trust_share": 17.6
    },
    "2026Q2": {
     "total_liabilities": 661.2,
@@ -3443,6 +3634,7 @@
     "operating_revenue": 266.0,
     "trust_fee": 164.6,
     "trust_account_loan": 1356.1,
+    "trust_assets": 1077118.7,
     "allowance_tal": 574.1,
     "borrowings": 0.0,
     "ncr": 3968.14,
@@ -3459,7 +3651,8 @@
     "net_income_ttm": -1170.6,
     "operating_revenue_ttm": 800.0,
     "roa_ttm": -36.66,
-    "roe_ttm": -46.24
+    "roe_ttm": -46.24,
+    "trust_share": 18.09
    }
   },
   "0011643": {
@@ -3480,6 +3673,7 @@
     "operating_revenue": 325.6,
     "trust_fee": 43.1,
     "trust_account_loan": 3857.0,
+    "trust_assets": 126954.0,
     "allowance_tal": 2060.9,
     "borrowings": 835.0,
     "ncr": 616.11,
@@ -3496,7 +3690,8 @@
     "net_income_ttm": 77.2,
     "operating_revenue_ttm": 1075.4,
     "roa_ttm": 1.35,
-    "roe_ttm": 1.75
+    "roe_ttm": 1.75,
+    "trust_share": 2.35
    },
    "2023Q4": {
     "total_liabilities": 1603.6,
@@ -3515,6 +3710,7 @@
     "operating_revenue": 332.2,
     "trust_fee": 62.2,
     "trust_account_loan": 3938.1,
+    "trust_assets": 128201.9,
     "allowance_tal": 2061.8,
     "borrowings": 930.0,
     "ncr": 543.36,
@@ -3531,7 +3727,8 @@
     "net_income_ttm": 31.4,
     "operating_revenue_ttm": 1115.4,
     "roa_ttm": 0.52,
-    "roe_ttm": 0.71
+    "roe_ttm": 0.71,
+    "trust_share": 2.37
    },
    "2024Q1": {
     "total_liabilities": 1818.7,
@@ -3550,6 +3747,7 @@
     "operating_revenue": 231.3,
     "trust_fee": 32.4,
     "trust_account_loan": 3866.1,
+    "trust_assets": 128734.3,
     "allowance_tal": 2067.4,
     "borrowings": 1225.0,
     "ncr": 484.81,
@@ -3566,7 +3764,8 @@
     "net_income_ttm": -29.3,
     "operating_revenue_ttm": 1071.6,
     "roa_ttm": -0.47,
-    "roe_ttm": -0.66
+    "roe_ttm": -0.66,
+    "trust_share": 2.37
    },
    "2024Q2": {
     "total_liabilities": 1814.1,
@@ -3585,6 +3784,7 @@
     "operating_revenue": 184.1,
     "trust_fee": 29.5,
     "trust_account_loan": 3738.4,
+    "trust_assets": 132564.7,
     "allowance_tal": 2075.7,
     "borrowings": 1282.5,
     "ncr": 494.84,
@@ -3601,7 +3801,8 @@
     "net_income_ttm": 218.6,
     "operating_revenue_ttm": 1073.2,
     "roa_ttm": 3.49,
-    "roe_ttm": 4.91
+    "roe_ttm": 4.91,
+    "trust_share": 2.42
    },
    "2024Q3": {
     "total_liabilities": 2227.5,
@@ -3620,6 +3821,7 @@
     "operating_revenue": 994.8,
     "trust_fee": 26.3,
     "trust_account_loan": 3789.5,
+    "trust_assets": 168071.9,
     "allowance_tal": 2210.5,
     "borrowings": 1280.0,
     "ncr": 477.93,
@@ -3636,7 +3838,8 @@
     "net_income_ttm": 454.8,
     "operating_revenue_ttm": 1742.4,
     "roa_ttm": 6.44,
-    "roe_ttm": 9.41
+    "roe_ttm": 9.41,
+    "trust_share": 2.97
    },
    "2024Q4": {
     "total_liabilities": 1984.4,
@@ -3655,6 +3858,7 @@
     "operating_revenue": 322.0,
     "trust_fee": 80.8,
     "trust_account_loan": 2904.7,
+    "trust_assets": 182831.6,
     "allowance_tal": 1439.9,
     "borrowings": 1262.5,
     "ncr": 513.89,
@@ -3671,7 +3875,8 @@
     "net_income_ttm": 359.5,
     "operating_revenue_ttm": 1732.2,
     "roa_ttm": 5.33,
-    "roe_ttm": 7.56
+    "roe_ttm": 7.56,
+    "trust_share": 3.19
    },
    "2025Q1": {
     "total_liabilities": 1532.6,
@@ -3690,6 +3895,7 @@
     "operating_revenue": 238.8,
     "trust_fee": 38.7,
     "trust_account_loan": 2765.8,
+    "trust_assets": 189086.8,
     "allowance_tal": 1435.7,
     "borrowings": 990.0,
     "ncr": 524.48,
@@ -3706,7 +3912,8 @@
     "net_income_ttm": 395.5,
     "operating_revenue_ttm": 1739.7,
     "roa_ttm": 6.25,
-    "roe_ttm": 8.25
+    "roe_ttm": 8.25,
+    "trust_share": 3.3
    },
    "2025Q2": {
     "total_liabilities": 1356.1,
@@ -3725,6 +3932,7 @@
     "operating_revenue": 304.7,
     "trust_fee": 53.0,
     "trust_account_loan": 2741.9,
+    "trust_assets": 208514.3,
     "allowance_tal": 1441.3,
     "borrowings": 897.5,
     "ncr": 498.89,
@@ -3741,7 +3949,8 @@
     "net_income_ttm": 480.9,
     "operating_revenue_ttm": 1860.3,
     "roa_ttm": 7.71,
-    "roe_ttm": 9.84
+    "roe_ttm": 9.84,
+    "trust_share": 3.59
    },
    "2025Q3": {
     "total_liabilities": 1576.1,
@@ -3760,6 +3969,7 @@
     "operating_revenue": 228.0,
     "trust_fee": 42.2,
     "trust_account_loan": 2739.6,
+    "trust_assets": 214599.2,
     "allowance_tal": 1440.0,
     "borrowings": 1134.4,
     "ncr": 513.62,
@@ -3776,7 +3986,8 @@
     "net_income_ttm": 170.8,
     "operating_revenue_ttm": 1093.5,
     "roa_ttm": 2.62,
-    "roe_ttm": 3.45
+    "roe_ttm": 3.45,
+    "trust_share": 3.68
    },
    "2025Q4": {
     "total_liabilities": 1604.5,
@@ -3795,6 +4006,7 @@
     "operating_revenue": 560.5,
     "trust_fee": 41.0,
     "trust_account_loan": 2787.0,
+    "trust_assets": 224595.0,
     "allowance_tal": 1511.5,
     "borrowings": 1050.8,
     "ncr": 472.01,
@@ -3811,7 +4023,8 @@
     "net_income_ttm": 462.5,
     "operating_revenue_ttm": 1332.0,
     "roa_ttm": 6.83,
-    "roe_ttm": 8.94
+    "roe_ttm": 8.94,
+    "trust_share": 3.81
    },
    "2026Q1": {
     "total_liabilities": 1453.8,
@@ -3830,6 +4043,7 @@
     "operating_revenue": 259.6,
     "trust_fee": 48.9,
     "trust_account_loan": 2815.7,
+    "trust_assets": 226618.2,
     "allowance_tal": 1522.5,
     "borrowings": 1045.7,
     "ncr": 430.57,
@@ -3846,7 +4060,8 @@
     "net_income_ttm": 466.2,
     "operating_revenue_ttm": 1352.8,
     "roa_ttm": 6.99,
-    "roe_ttm": 8.94
+    "roe_ttm": 8.94,
+    "trust_share": 3.83
    },
    "2026Q2": {
     "total_liabilities": 1871.1,
@@ -3865,6 +4080,7 @@
     "operating_revenue": 379.2,
     "trust_fee": 58.3,
     "trust_account_loan": 2788.1,
+    "trust_assets": 222699.0,
     "allowance_tal": 1506.5,
     "borrowings": 1442.4,
     "ncr": 376.61,
@@ -3881,7 +4097,8 @@
     "net_income_ttm": 511.6,
     "operating_revenue_ttm": 1427.3,
     "roa_ttm": 7.58,
-    "roe_ttm": 10.48
+    "roe_ttm": 10.48,
+    "trust_share": 3.74
    }
   },
   "0012306": {
@@ -3902,6 +4119,7 @@
     "operating_revenue": 216.0,
     "trust_fee": 152.1,
     "trust_account_loan": 913.7,
+    "trust_assets": 378571.5,
     "allowance_tal": 57.5,
     "borrowings": 30.0,
     "ncr": 832.18,
@@ -3918,7 +4136,8 @@
     "net_income_ttm": 220.3,
     "operating_revenue_ttm": 874.4,
     "roa_ttm": 8.6,
-    "roe_ttm": 10.6
+    "roe_ttm": 10.6,
+    "trust_share": 7.01
    },
    "2023Q4": {
     "total_liabilities": 616.7,
@@ -3937,6 +4156,7 @@
     "operating_revenue": 200.5,
     "trust_fee": 144.5,
     "trust_account_loan": 1203.8,
+    "trust_assets": 378815.8,
     "allowance_tal": 215.3,
     "borrowings": 245.0,
     "ncr": 877.45,
@@ -3953,7 +4173,8 @@
     "net_income_ttm": 169.7,
     "operating_revenue_ttm": 837.9,
     "roa_ttm": 6.28,
-    "roe_ttm": 8.13
+    "roe_ttm": 8.13,
+    "trust_share": 7.02
    },
    "2024Q1": {
     "total_liabilities": 472.7,
@@ -3972,6 +4193,7 @@
     "operating_revenue": 179.8,
     "trust_fee": 117.5,
     "trust_account_loan": 1501.7,
+    "trust_assets": 385152.5,
     "allowance_tal": 252.2,
     "borrowings": 180.0,
     "ncr": 821.75,
@@ -3988,7 +4210,8 @@
     "net_income_ttm": 111.5,
     "operating_revenue_ttm": 804.7,
     "roa_ttm": 4.37,
-    "roe_ttm": 5.36
+    "roe_ttm": 5.36,
+    "trust_share": 7.08
    },
    "2024Q2": {
     "total_liabilities": 662.7,
@@ -4007,6 +4230,7 @@
     "operating_revenue": 151.1,
     "trust_fee": 103.4,
     "trust_account_loan": 1673.7,
+    "trust_assets": 385108.9,
     "allowance_tal": 279.0,
     "borrowings": 410.0,
     "ncr": 703.69,
@@ -4023,7 +4247,8 @@
     "net_income_ttm": 66.6,
     "operating_revenue_ttm": 747.4,
     "roa_ttm": 2.42,
-    "roe_ttm": 3.19
+    "roe_ttm": 3.19,
+    "trust_share": 7.03
    },
    "2024Q3": {
     "total_liabilities": 708.7,
@@ -4042,6 +4267,7 @@
     "operating_revenue": 141.1,
     "trust_fee": 96.8,
     "trust_account_loan": 1953.1,
+    "trust_assets": 378559.7,
     "allowance_tal": 358.3,
     "borrowings": 457.5,
     "ncr": 702.72,
@@ -4058,7 +4284,8 @@
     "net_income_ttm": -10.6,
     "operating_revenue_ttm": 672.5,
     "roa_ttm": -0.38,
-    "roe_ttm": -0.52
+    "roe_ttm": -0.52,
+    "trust_share": 6.68
    },
    "2024Q4": {
     "total_liabilities": 907.9,
@@ -4077,6 +4304,7 @@
     "operating_revenue": 120.6,
     "trust_fee": 77.4,
     "trust_account_loan": 2278.0,
+    "trust_assets": 385577.4,
     "allowance_tal": 566.0,
     "borrowings": 542.0,
     "ncr": 586.3,
@@ -4093,7 +4321,8 @@
     "net_income_ttm": -192.0,
     "operating_revenue_ttm": 592.6,
     "roa_ttm": -6.91,
-    "roe_ttm": -10.25
+    "roe_ttm": -10.25,
+    "trust_share": 6.72
    },
    "2025Q1": {
     "total_liabilities": 1349.4,
@@ -4112,6 +4341,7 @@
     "operating_revenue": 142.9,
     "trust_fee": 98.9,
     "trust_account_loan": 2469.6,
+    "trust_assets": 385306.7,
     "allowance_tal": 625.4,
     "borrowings": 999.5,
     "ncr": 564.07,
@@ -4128,7 +4358,8 @@
     "net_income_ttm": -234.5,
     "operating_revenue_ttm": 555.7,
     "roa_ttm": -7.34,
-    "roe_ttm": -12.71
+    "roe_ttm": -12.71,
+    "trust_share": 6.72
    },
    "2025Q2": {
     "total_liabilities": 1423.7,
@@ -4147,6 +4378,7 @@
     "operating_revenue": 150.8,
     "trust_fee": 94.7,
     "trust_account_loan": 2794.2,
+    "trust_assets": 390667.6,
     "allowance_tal": 693.4,
     "borrowings": 1070.4,
     "ncr": 461.77,
@@ -4163,7 +4395,8 @@
     "net_income_ttm": -281.1,
     "operating_revenue_ttm": 555.4,
     "roa_ttm": -8.7,
-    "roe_ttm": -15.54
+    "roe_ttm": -15.54,
+    "trust_share": 6.72
    },
    "2025Q3": {
     "total_liabilities": 1391.4,
@@ -4182,6 +4415,7 @@
     "operating_revenue": 159.0,
     "trust_fee": 94.4,
     "trust_account_loan": 2765.6,
+    "trust_assets": 383296.9,
     "allowance_tal": 800.8,
     "borrowings": 979.5,
     "ncr": 541.89,
@@ -4198,7 +4432,8 @@
     "net_income_ttm": -318.8,
     "operating_revenue_ttm": 573.3,
     "roa_ttm": -10.23,
-    "roe_ttm": -18.47
+    "roe_ttm": -18.47,
+    "trust_share": 6.58
    },
    "2025Q4": {
     "total_liabilities": 2025.8,
@@ -4217,6 +4452,7 @@
     "operating_revenue": 105.7,
     "trust_fee": 64.6,
     "trust_account_loan": 3107.3,
+    "trust_assets": 385459.3,
     "allowance_tal": 1177.8,
     "borrowings": 1215.6,
     "ncr": 428.31,
@@ -4233,7 +4469,8 @@
     "net_income_ttm": -842.8,
     "operating_revenue_ttm": 558.4,
     "roa_ttm": -27.54,
-    "roe_ttm": -81.46
+    "roe_ttm": -81.46,
+    "trust_share": 6.54
    },
    "2026Q1": {
     "total_liabilities": 1859.6,
@@ -4252,6 +4489,7 @@
     "operating_revenue": 218.7,
     "trust_fee": 69.7,
     "trust_account_loan": 3051.6,
+    "trust_assets": 392953.4,
     "allowance_tal": 1197.0,
     "borrowings": 1135.7,
     "ncr": 169.38,
@@ -4268,7 +4506,8 @@
     "net_income_ttm": -730.6,
     "operating_revenue_ttm": 634.2,
     "roa_ttm": -24.53,
-    "roe_ttm": -65.33
+    "roe_ttm": -65.33,
+    "trust_share": 6.65
    },
    "2026Q2": {
     "total_liabilities": 1501.6,
@@ -4287,6 +4526,7 @@
     "operating_revenue": 73.7,
     "trust_fee": 70.8,
     "trust_account_loan": 3081.8,
+    "trust_assets": 396671.5,
     "allowance_tal": 1220.6,
     "borrowings": 777.7,
     "ncr": 433.87,
@@ -4303,7 +4543,8 @@
     "net_income_ttm": -730.2,
     "operating_revenue_ttm": 557.1,
     "roa_ttm": -25.33,
-    "roe_ttm": -52.86
+    "roe_ttm": -52.86,
+    "trust_share": 6.66
    }
   },
   "0011452": {
@@ -4324,6 +4565,7 @@
     "operating_revenue": 376.1,
     "trust_fee": 256.8,
     "trust_account_loan": 2553.1,
+    "trust_assets": 611127.4,
     "allowance_tal": 168.7,
     "borrowings": 0.0,
     "ncr": 804.72,
@@ -4340,7 +4582,8 @@
     "net_income_ttm": 787.6,
     "operating_revenue_ttm": 1600.8,
     "roa_ttm": 13.22,
-    "roe_ttm": 14.95
+    "roe_ttm": 14.95,
+    "trust_share": 11.32
    },
    "2023Q4": {
     "total_liabilities": 684.0,
@@ -4359,6 +4602,7 @@
     "operating_revenue": 365.9,
     "trust_fee": 246.2,
     "trust_account_loan": 2511.1,
+    "trust_assets": 615945.4,
     "allowance_tal": 203.0,
     "borrowings": 0.0,
     "ncr": 839.96,
@@ -4375,7 +4619,8 @@
     "net_income_ttm": 809.2,
     "operating_revenue_ttm": 1614.1,
     "roa_ttm": 13.25,
-    "roe_ttm": 14.93
+    "roe_ttm": 14.93,
+    "trust_share": 11.41
    },
    "2024Q1": {
     "total_liabilities": 1022.8,
@@ -4394,6 +4639,7 @@
     "operating_revenue": 401.6,
     "trust_fee": 281.4,
     "trust_account_loan": 3122.2,
+    "trust_assets": 619355.8,
     "allowance_tal": 239.1,
     "borrowings": 114.3,
     "ncr": 754.24,
@@ -4410,7 +4656,8 @@
     "net_income_ttm": 768.7,
     "operating_revenue_ttm": 1604.3,
     "roa_ttm": 11.96,
-    "roe_ttm": 14.23
+    "roe_ttm": 14.23,
+    "trust_share": 11.39
    },
    "2024Q2": {
     "total_liabilities": 772.6,
@@ -4429,6 +4676,7 @@
     "operating_revenue": 408.9,
     "trust_fee": 232.9,
     "trust_account_loan": 3884.8,
+    "trust_assets": 612290.6,
     "allowance_tal": 261.6,
     "borrowings": 121.7,
     "ncr": 745.36,
@@ -4445,7 +4693,8 @@
     "net_income_ttm": 701.4,
     "operating_revenue_ttm": 1552.5,
     "roa_ttm": 11.03,
-    "roe_ttm": 12.56
+    "roe_ttm": 12.56,
+    "trust_share": 11.18
    },
    "2024Q3": {
     "total_liabilities": 1249.1,
@@ -4464,6 +4713,7 @@
     "operating_revenue": 385.3,
     "trust_fee": 223.5,
     "trust_account_loan": 4627.0,
+    "trust_assets": 601081.2,
     "allowance_tal": 285.8,
     "borrowings": 631.1,
     "ncr": 758.34,
@@ -4480,7 +4730,8 @@
     "net_income_ttm": 721.2,
     "operating_revenue_ttm": 1561.7,
     "roa_ttm": 10.25,
-    "roe_ttm": 12.46
+    "roe_ttm": 12.46,
+    "trust_share": 10.6
    },
    "2024Q4": {
     "total_liabilities": 1836.3,
@@ -4499,6 +4750,7 @@
     "operating_revenue": 532.0,
     "trust_fee": 240.9,
     "trust_account_loan": 5661.0,
+    "trust_assets": 593496.5,
     "allowance_tal": 643.8,
     "borrowings": 1315.1,
     "ncr": 799.17,
@@ -4515,7 +4767,8 @@
     "net_income_ttm": 588.4,
     "operating_revenue_ttm": 1727.8,
     "roa_ttm": 7.7,
-    "roe_ttm": 10.13
+    "roe_ttm": 10.13,
+    "trust_share": 10.35
    },
    "2025Q1": {
     "total_liabilities": 2059.2,
@@ -4534,6 +4787,7 @@
     "operating_revenue": 383.9,
     "trust_fee": 231.9,
     "trust_account_loan": 6116.7,
+    "trust_assets": 606545.5,
     "allowance_tal": 641.1,
     "borrowings": 1501.1,
     "ncr": 698.79,
@@ -4550,7 +4804,8 @@
     "net_income_ttm": 583.5,
     "operating_revenue_ttm": 1710.1,
     "roa_ttm": 7.3,
-    "roe_ttm": 9.83
+    "roe_ttm": 9.83,
+    "trust_share": 10.58
    },
    "2025Q2": {
     "total_liabilities": 2460.0,
@@ -4569,6 +4824,7 @@
     "operating_revenue": 385.1,
     "trust_fee": 208.4,
     "trust_account_loan": 6350.1,
+    "trust_assets": 612380.8,
     "allowance_tal": 726.9,
     "borrowings": 1999.9,
     "ncr": 619.24,
@@ -4585,7 +4841,8 @@
     "net_income_ttm": 534.8,
     "operating_revenue_ttm": 1686.3,
     "roa_ttm": 6.27,
-    "roe_ttm": 8.81
+    "roe_ttm": 8.81,
+    "trust_share": 10.53
    },
    "2025Q3": {
     "total_liabilities": 2493.9,
@@ -4604,6 +4861,7 @@
     "operating_revenue": 363.9,
     "trust_fee": 194.6,
     "trust_account_loan": 6484.4,
+    "trust_assets": 601644.8,
     "allowance_tal": 906.6,
     "borrowings": 2040.2,
     "ncr": 675.73,
@@ -4620,7 +4878,8 @@
     "net_income_ttm": 388.8,
     "operating_revenue_ttm": 1664.9,
     "roa_ttm": 4.51,
-    "roe_ttm": 6.34
+    "roe_ttm": 6.34,
+    "trust_share": 10.33
    },
    "2025Q4": {
     "total_liabilities": 2968.0,
@@ -4639,6 +4898,7 @@
     "operating_revenue": 424.3,
     "trust_fee": 181.5,
     "trust_account_loan": 7170.4,
+    "trust_assets": 595992.1,
     "allowance_tal": 1324.0,
     "borrowings": 2617.8,
     "ncr": 584.9,
@@ -4655,7 +4915,8 @@
     "net_income_ttm": 248.0,
     "operating_revenue_ttm": 1557.2,
     "roa_ttm": 2.76,
-    "roe_ttm": 4.13
+    "roe_ttm": 4.13,
+    "trust_share": 10.11
    },
    "2026Q1": {
     "total_liabilities": 5304.2,
@@ -4674,6 +4935,7 @@
     "operating_revenue": 434.5,
     "trust_fee": 148.9,
     "trust_account_loan": 9254.5,
+    "trust_assets": 596974.8,
     "allowance_tal": 1493.2,
     "borrowings": 4701.1,
     "ncr": 450.77,
@@ -4690,7 +4952,8 @@
     "net_income_ttm": 138.9,
     "operating_revenue_ttm": 1607.8,
     "roa_ttm": 1.23,
-    "roe_ttm": 2.31
+    "roe_ttm": 2.31,
+    "trust_share": 10.1
    },
    "2026Q2": {
     "total_liabilities": 5042.6,
@@ -4709,6 +4972,7 @@
     "operating_revenue": 264.4,
     "trust_fee": 169.0,
     "trust_account_loan": 8612.0,
+    "trust_assets": 588316.2,
     "allowance_tal": 1536.9,
     "borrowings": 4398.7,
     "ncr": 511.8,
@@ -4725,7 +4989,8 @@
     "net_income_ttm": 6.5,
     "operating_revenue_ttm": 1487.1,
     "roa_ttm": 0.06,
-    "roe_ttm": 0.11
+    "roe_ttm": 0.11,
+    "trust_share": 9.88
    }
   },
   "0010906": {
@@ -4746,6 +5011,7 @@
     "operating_revenue": 356.1,
     "trust_fee": 215.2,
     "trust_account_loan": 4414.6,
+    "trust_assets": 228044.8,
     "allowance_tal": 489.3,
     "borrowings": 999.8,
     "ncr": 391.69,
@@ -4762,7 +5028,8 @@
     "net_income_ttm": 769.1,
     "operating_revenue_ttm": 1989.5,
     "roa_ttm": 7.55,
-    "roe_ttm": 9.07
+    "roe_ttm": 9.07,
+    "trust_share": 4.22
    },
    "2023Q4": {
     "total_liabilities": 1853.0,
@@ -4781,6 +5048,7 @@
     "operating_revenue": 519.0,
     "trust_fee": 299.8,
     "trust_account_loan": 4688.1,
+    "trust_assets": 226911.6,
     "allowance_tal": 523.3,
     "borrowings": 999.8,
     "ncr": 370.01,
@@ -4797,7 +5065,8 @@
     "net_income_ttm": 788.6,
     "operating_revenue_ttm": 2091.4,
     "roa_ttm": 7.52,
-    "roe_ttm": 9.13
+    "roe_ttm": 9.13,
+    "trust_share": 4.2
    },
    "2024Q1": {
     "total_liabilities": 2809.3,
@@ -4816,6 +5085,7 @@
     "operating_revenue": 450.3,
     "trust_fee": 203.9,
     "trust_account_loan": 5520.4,
+    "trust_assets": 221475.7,
     "allowance_tal": 520.7,
     "borrowings": 1699.9,
     "ncr": 324.26,
@@ -4832,7 +5102,8 @@
     "net_income_ttm": 541.5,
     "operating_revenue_ttm": 1722.2,
     "roa_ttm": 4.78,
-    "roe_ttm": 6.36
+    "roe_ttm": 6.36,
+    "trust_share": 4.07
    },
    "2024Q2": {
     "total_liabilities": 3292.7,
@@ -4851,6 +5122,7 @@
     "operating_revenue": 381.0,
     "trust_fee": 201.4,
     "trust_account_loan": 6048.9,
+    "trust_assets": 238532.2,
     "allowance_tal": 579.4,
     "borrowings": 2485.2,
     "ncr": 308.95,
@@ -4867,7 +5139,8 @@
     "net_income_ttm": 466.3,
     "operating_revenue_ttm": 1706.4,
     "roa_ttm": 3.93,
-    "roe_ttm": 5.45
+    "roe_ttm": 5.45,
+    "trust_share": 4.36
    },
    "2024Q3": {
     "total_liabilities": 3383.9,
@@ -4886,6 +5159,7 @@
     "operating_revenue": 349.8,
     "trust_fee": 170.6,
     "trust_account_loan": 6931.5,
+    "trust_assets": 233911.0,
     "allowance_tal": 953.8,
     "borrowings": 2788.1,
     "ncr": 315.44,
@@ -4902,7 +5176,8 @@
     "net_income_ttm": 292.4,
     "operating_revenue_ttm": 1700.1,
     "roa_ttm": 2.46,
-    "roe_ttm": 3.44
+    "roe_ttm": 3.44,
+    "trust_share": 4.13
    },
    "2024Q4": {
     "total_liabilities": 4062.7,
@@ -4921,6 +5196,7 @@
     "operating_revenue": 416.3,
     "trust_fee": 158.9,
     "trust_account_loan": 8191.2,
+    "trust_assets": 226678.5,
     "allowance_tal": 1078.3,
     "borrowings": 3580.6,
     "ncr": 284.18,
@@ -4937,7 +5213,8 @@
     "net_income_ttm": 165.5,
     "operating_revenue_ttm": 1597.4,
     "roa_ttm": 1.31,
-    "roe_ttm": 1.94
+    "roe_ttm": 1.94,
+    "trust_share": 3.95
    },
    "2025Q1": {
     "total_liabilities": 5448.6,
@@ -4956,6 +5233,7 @@
     "operating_revenue": 358.4,
     "trust_fee": 134.0,
     "trust_account_loan": 8376.4,
+    "trust_assets": 228429.9,
     "allowance_tal": 1158.9,
     "borrowings": 4883.0,
     "ncr": 283.96,
@@ -4972,7 +5250,8 @@
     "net_income_ttm": 83.3,
     "operating_revenue_ttm": 1505.5,
     "roa_ttm": 0.6,
-    "roe_ttm": 0.98
+    "roe_ttm": 0.98,
+    "trust_share": 3.98
    },
    "2025Q2": {
     "total_liabilities": 5369.1,
@@ -4991,6 +5270,7 @@
     "operating_revenue": 382.4,
     "trust_fee": 143.3,
     "trust_account_loan": 8843.9,
+    "trust_assets": 231351.9,
     "allowance_tal": 1325.4,
     "borrowings": 4877.1,
     "ncr": 280.16,
@@ -5007,7 +5287,8 @@
     "net_income_ttm": 55.6,
     "operating_revenue_ttm": 1506.9,
     "roa_ttm": 0.4,
-    "roe_ttm": 0.65
+    "roe_ttm": 0.65,
+    "trust_share": 3.98
    },
    "2025Q3": {
     "total_liabilities": 4246.3,
@@ -5026,6 +5307,7 @@
     "operating_revenue": 334.9,
     "trust_fee": 99.5,
     "trust_account_loan": 7674.1,
+    "trust_assets": 237010.8,
     "allowance_tal": 1413.7,
     "borrowings": 3636.2,
     "ncr": 375.9,
@@ -5042,7 +5324,8 @@
     "net_income_ttm": 371.5,
     "operating_revenue_ttm": 1492.0,
     "roa_ttm": 2.86,
-    "roe_ttm": 4.25
+    "roe_ttm": 4.25,
+    "trust_share": 4.07
    },
    "2025Q4": {
     "total_liabilities": 4208.3,
@@ -5061,6 +5344,7 @@
     "operating_revenue": 387.4,
     "trust_fee": 107.9,
     "trust_account_loan": 8025.9,
+    "trust_assets": 248613.6,
     "allowance_tal": 1612.3,
     "borrowings": 3639.8,
     "ncr": 363.04,
@@ -5077,7 +5361,8 @@
     "net_income_ttm": 254.1,
     "operating_revenue_ttm": 1463.1,
     "roa_ttm": 1.97,
-    "roe_ttm": 2.93
+    "roe_ttm": 2.93,
+    "trust_share": 4.22
    },
    "2026Q1": {
     "total_liabilities": 4258.1,
@@ -5096,6 +5381,7 @@
     "operating_revenue": 514.3,
     "trust_fee": 96.1,
     "trust_account_loan": 7393.5,
+    "trust_assets": 257366.8,
     "allowance_tal": 1869.4,
     "borrowings": 3643.4,
     "ncr": 363.8,
@@ -5112,7 +5398,8 @@
     "net_income_ttm": 202.1,
     "operating_revenue_ttm": 1619.0,
     "roa_ttm": 1.58,
-    "roe_ttm": 2.38
+    "roe_ttm": 2.38,
+    "trust_share": 4.35
    },
    "2026Q2": {
     "total_liabilities": 3583.1,
@@ -5131,6 +5418,7 @@
     "operating_revenue": 654.4,
     "trust_fee": 219.8,
     "trust_account_loan": 7055.8,
+    "trust_assets": 260860.9,
     "allowance_tal": 2019.3,
     "borrowings": 3107.0,
     "ncr": 411.29,
@@ -5147,7 +5435,8 @@
     "net_income_ttm": 383.6,
     "operating_revenue_ttm": 1891.0,
     "roa_ttm": 3.12,
-    "roe_ttm": 4.41
+    "roe_ttm": 4.41,
+    "trust_share": 4.38
    }
   },
   "0010902": {
@@ -5168,6 +5457,7 @@
     "operating_revenue": 446.2,
     "trust_fee": 188.5,
     "trust_account_loan": 7948.3,
+    "trust_assets": 118874.1,
     "allowance_tal": 1045.5,
     "borrowings": 5667.4,
     "ncr": 306.84,
@@ -5184,7 +5474,8 @@
     "net_income_ttm": 230.5,
     "operating_revenue_ttm": 1791.3,
     "roa_ttm": 1.49,
-    "roe_ttm": 2.67
+    "roe_ttm": 2.67,
+    "trust_share": 2.2
    },
    "2023Q4": {
     "total_liabilities": 7318.9,
@@ -5203,6 +5494,7 @@
     "operating_revenue": 622.8,
     "trust_fee": 199.6,
     "trust_account_loan": 8202.6,
+    "trust_assets": 118976.2,
     "allowance_tal": 1136.7,
     "borrowings": 6153.2,
     "ncr": 306.31,
@@ -5219,7 +5511,8 @@
     "net_income_ttm": 252.6,
     "operating_revenue_ttm": 1871.4,
     "roa_ttm": 1.58,
-    "roe_ttm": 2.91
+    "roe_ttm": 2.91,
+    "trust_share": 2.2
    },
    "2024Q1": {
     "total_liabilities": 7677.1,
@@ -5238,6 +5531,7 @@
     "operating_revenue": 474.2,
     "trust_fee": 211.0,
     "trust_account_loan": 7620.8,
+    "trust_assets": 118858.2,
     "allowance_tal": 1150.1,
     "borrowings": 6372.9,
     "ncr": 273.72,
@@ -5254,7 +5548,8 @@
     "net_income_ttm": 298.2,
     "operating_revenue_ttm": 1964.6,
     "roa_ttm": 1.82,
-    "roe_ttm": 3.44
+    "roe_ttm": 3.44,
+    "trust_share": 2.18
    },
    "2024Q2": {
     "total_liabilities": 7515.7,
@@ -5273,6 +5568,7 @@
     "operating_revenue": 411.0,
     "trust_fee": 203.7,
     "trust_account_loan": 7869.1,
+    "trust_assets": 119225.3,
     "allowance_tal": 1151.8,
     "borrowings": 6427.7,
     "ncr": 277.55,
@@ -5289,7 +5585,8 @@
     "net_income_ttm": 338.2,
     "operating_revenue_ttm": 1954.2,
     "roa_ttm": 2.07,
-    "roe_ttm": 3.85
+    "roe_ttm": 3.85,
+    "trust_share": 2.18
    },
    "2024Q3": {
     "total_liabilities": 7284.6,
@@ -5308,6 +5605,7 @@
     "operating_revenue": 375.2,
     "trust_fee": 218.6,
     "trust_account_loan": 6928.0,
+    "trust_assets": 132724.8,
     "allowance_tal": 1181.3,
     "borrowings": 6146.8,
     "ncr": 251.03,
@@ -5324,7 +5622,8 @@
     "net_income_ttm": 362.0,
     "operating_revenue_ttm": 1883.2,
     "roa_ttm": 2.25,
-    "roe_ttm": 4.1
+    "roe_ttm": 4.1,
+    "trust_share": 2.34
    },
    "2024Q4": {
     "total_liabilities": 7832.3,
@@ -5343,6 +5642,7 @@
     "operating_revenue": 949.5,
     "trust_fee": 294.9,
     "trust_account_loan": 7941.2,
+    "trust_assets": 126360.2,
     "allowance_tal": 1350.9,
     "borrowings": 6275.5,
     "ncr": 269.06,
@@ -5359,7 +5659,8 @@
     "net_income_ttm": 279.3,
     "operating_revenue_ttm": 2209.9,
     "roa_ttm": 1.68,
-    "roe_ttm": 3.17
+    "roe_ttm": 3.17,
+    "trust_share": 2.2
    },
    "2025Q1": {
     "total_liabilities": 7652.2,
@@ -5378,6 +5679,7 @@
     "operating_revenue": 604.4,
     "trust_fee": 170.6,
     "trust_account_loan": 7971.1,
+    "trust_assets": 130123.1,
     "allowance_tal": 1408.4,
     "borrowings": 5994.4,
     "ncr": 270.68,
@@ -5394,7 +5696,8 @@
     "net_income_ttm": 340.0,
     "operating_revenue_ttm": 2340.1,
     "roa_ttm": 2.06,
-    "roe_ttm": 3.85
+    "roe_ttm": 3.85,
+    "trust_share": 2.27
    },
    "2025Q2": {
     "total_liabilities": 7256.8,
@@ -5413,6 +5716,7 @@
     "operating_revenue": 361.3,
     "trust_fee": 119.6,
     "trust_account_loan": 8872.5,
+    "trust_assets": 128577.6,
     "allowance_tal": 1447.0,
     "borrowings": 5968.1,
     "ncr": 268.9,
@@ -5429,7 +5733,8 @@
     "net_income_ttm": 250.5,
     "operating_revenue_ttm": 2290.4,
     "roa_ttm": 1.55,
-    "roe_ttm": 2.82
+    "roe_ttm": 2.82,
+    "trust_share": 2.21
    },
    "2025Q3": {
     "total_liabilities": 7636.4,
@@ -5448,6 +5753,7 @@
     "operating_revenue": 432.7,
     "trust_fee": 183.1,
     "trust_account_loan": 9141.7,
+    "trust_assets": 126275.2,
     "allowance_tal": 1500.0,
     "borrowings": 6342.1,
     "ncr": 251.18,
@@ -5464,7 +5770,8 @@
     "net_income_ttm": 205.3,
     "operating_revenue_ttm": 2347.9,
     "roa_ttm": 1.24,
-    "roe_ttm": 2.32
+    "roe_ttm": 2.32,
+    "trust_share": 2.17
    },
    "2025Q4": {
     "total_liabilities": 8381.7,
@@ -5483,6 +5790,7 @@
     "operating_revenue": 540.8,
     "trust_fee": 214.6,
     "trust_account_loan": 9565.1,
+    "trust_assets": 135784.7,
     "allowance_tal": 1547.5,
     "borrowings": 6771.9,
     "ncr": 230.05,
@@ -5499,7 +5807,8 @@
     "net_income_ttm": 240.8,
     "operating_revenue_ttm": 1939.2,
     "roa_ttm": 1.39,
-    "roe_ttm": 2.7
+    "roe_ttm": 2.7,
+    "trust_share": 2.3
    },
    "2026Q1": {
     "total_liabilities": 8858.6,
@@ -5518,6 +5827,7 @@
     "operating_revenue": 398.0,
     "trust_fee": 156.0,
     "trust_account_loan": 9993.3,
+    "trust_assets": 140654.4,
     "allowance_tal": 1586.8,
     "borrowings": 7320.0,
     "ncr": 205.08,
@@ -5534,7 +5844,8 @@
     "net_income_ttm": 87.4,
     "operating_revenue_ttm": 1732.8,
     "roa_ttm": 0.49,
-    "roe_ttm": 0.99
+    "roe_ttm": 0.99,
+    "trust_share": 2.38
    },
    "2026Q2": {
     "total_liabilities": 8601.8,
@@ -5553,6 +5864,7 @@
     "operating_revenue": 507.6,
     "trust_fee": 178.4,
     "trust_account_loan": 10428.5,
+    "trust_assets": 151045.5,
     "allowance_tal": 1607.6,
     "borrowings": 7362.4,
     "ncr": 214.9,
@@ -5569,7 +5881,8 @@
     "net_income_ttm": 126.0,
     "operating_revenue_ttm": 1879.1,
     "roa_ttm": 0.72,
-    "roe_ttm": 1.41
+    "roe_ttm": 1.41,
+    "trust_share": 2.54
    }
   },
   "0017106": {
@@ -5590,6 +5903,7 @@
     "operating_revenue": 129.4,
     "trust_fee": 87.6,
     "trust_account_loan": 1545.9,
+    "trust_assets": 116176.5,
     "allowance_tal": 49.7,
     "borrowings": 0.0,
     "ncr": 1358.93,
@@ -5606,7 +5920,8 @@
     "net_income_ttm": 184.8,
     "operating_revenue_ttm": 529.1,
     "roa_ttm": 7.83,
-    "roe_ttm": 8.39
+    "roe_ttm": 8.39,
+    "trust_share": 2.15
    },
    "2023Q4": {
     "total_liabilities": 1074.4,
@@ -5625,6 +5940,7 @@
     "operating_revenue": 129.6,
     "trust_fee": 85.9,
     "trust_account_loan": 2369.7,
+    "trust_assets": 120516.8,
     "allowance_tal": 35.5,
     "borrowings": 900.0,
     "ncr": 1324.43,
@@ -5641,7 +5957,8 @@
     "net_income_ttm": 211.6,
     "operating_revenue_ttm": 540.3,
     "roa_ttm": 6.36,
-    "roe_ttm": 9.39
+    "roe_ttm": 9.39,
+    "trust_share": 2.23
    },
    "2024Q1": {
     "total_liabilities": 1463.4,
@@ -5660,6 +5977,7 @@
     "operating_revenue": 178.8,
     "trust_fee": 102.1,
     "trust_account_loan": 2855.9,
+    "trust_assets": 126187.9,
     "allowance_tal": 73.6,
     "borrowings": 1300.0,
     "ncr": 1164.07,
@@ -5676,7 +5994,8 @@
     "net_income_ttm": 210.6,
     "operating_revenue_ttm": 585.0,
     "roa_ttm": 5.57,
-    "roe_ttm": 9.09
+    "roe_ttm": 9.09,
+    "trust_share": 2.32
    },
    "2024Q2": {
     "total_liabilities": 2233.1,
@@ -5695,6 +6014,7 @@
     "operating_revenue": 160.6,
     "trust_fee": 94.3,
     "trust_account_loan": 3769.7,
+    "trust_assets": 141732.8,
     "allowance_tal": 185.9,
     "borrowings": 2100.0,
     "ncr": 1016.1,
@@ -5711,7 +6031,8 @@
     "net_income_ttm": 167.4,
     "operating_revenue_ttm": 598.4,
     "roa_ttm": 3.7,
-    "roe_ttm": 7.3
+    "roe_ttm": 7.3,
+    "trust_share": 2.59
    },
    "2024Q3": {
     "total_liabilities": 2874.5,
@@ -5730,6 +6051,7 @@
     "operating_revenue": 217.7,
     "trust_fee": 132.8,
     "trust_account_loan": 4539.8,
+    "trust_assets": 147210.1,
     "allowance_tal": 242.4,
     "borrowings": 2700.0,
     "ncr": 1051.12,
@@ -5746,7 +6068,8 @@
     "net_income_ttm": 183.7,
     "operating_revenue_ttm": 686.7,
     "roa_ttm": 3.49,
-    "roe_ttm": 7.7
+    "roe_ttm": 7.7,
+    "trust_share": 2.6
    },
    "2024Q4": {
     "total_liabilities": 3974.5,
@@ -5765,6 +6088,7 @@
     "operating_revenue": 179.2,
     "trust_fee": 104.3,
     "trust_account_loan": 5654.9,
+    "trust_assets": 173639.7,
     "allowance_tal": 268.6,
     "borrowings": 3700.0,
     "ncr": 871.13,
@@ -5781,7 +6105,8 @@
     "net_income_ttm": 119.4,
     "operating_revenue_ttm": 736.3,
     "roa_ttm": 1.88,
-    "roe_ttm": 5.03
+    "roe_ttm": 5.03,
+    "trust_share": 3.03
    },
    "2025Q1": {
     "total_liabilities": 3970.5,
@@ -5800,6 +6125,7 @@
     "operating_revenue": 200.6,
     "trust_fee": 102.2,
     "trust_account_loan": 5583.1,
+    "trust_assets": 177234.5,
     "allowance_tal": 346.7,
     "borrowings": 3700.0,
     "ncr": 861.76,
@@ -5816,7 +6142,8 @@
     "net_income_ttm": 76.8,
     "operating_revenue_ttm": 758.1,
     "roa_ttm": 1.21,
-    "roe_ttm": 3.21
+    "roe_ttm": 3.21,
+    "trust_share": 3.09
    },
    "2025Q2": {
     "total_liabilities": 4479.9,
@@ -5835,6 +6162,7 @@
     "operating_revenue": 211.9,
     "trust_fee": 121.2,
     "trust_account_loan": 6303.5,
+    "trust_assets": 182479.9,
     "allowance_tal": 424.8,
     "borrowings": 4200.0,
     "ncr": 846.8,
@@ -5851,7 +6179,8 @@
     "net_income_ttm": 100.3,
     "operating_revenue_ttm": 809.4,
     "roa_ttm": 1.46,
-    "roe_ttm": 4.19
+    "roe_ttm": 4.19,
+    "trust_share": 3.14
    },
    "2025Q3": {
     "total_liabilities": 5805.7,
@@ -5870,6 +6199,7 @@
     "operating_revenue": 216.6,
     "trust_fee": 113.5,
     "trust_account_loan": 7523.6,
+    "trust_assets": 213501.2,
     "allowance_tal": 446.2,
     "borrowings": 5400.0,
     "ncr": 628.12,
@@ -5886,7 +6216,8 @@
     "net_income_ttm": -5.7,
     "operating_revenue_ttm": 808.3,
     "roa_ttm": -0.07,
-    "roe_ttm": -0.24
+    "roe_ttm": -0.24,
+    "trust_share": 3.67
    },
    "2025Q4": {
     "total_liabilities": 6176.7,
@@ -5905,6 +6236,7 @@
     "operating_revenue": 281.2,
     "trust_fee": 91.5,
     "trust_account_loan": 8135.5,
+    "trust_assets": 234997.8,
     "allowance_tal": 459.6,
     "borrowings": 5700.0,
     "ncr": 410.95,
@@ -5921,7 +6253,8 @@
     "net_income_ttm": 52.9,
     "operating_revenue_ttm": 910.3,
     "roa_ttm": 0.62,
-    "roe_ttm": 2.18
+    "roe_ttm": 2.18,
+    "trust_share": 3.99
    },
    "2026Q1": {
     "total_liabilities": 6289.6,
@@ -5940,6 +6273,7 @@
     "operating_revenue": 304.7,
     "trust_fee": 101.1,
     "trust_account_loan": 8321.7,
+    "trust_assets": 255087.6,
     "allowance_tal": 570.5,
     "borrowings": 5900.0,
     "ncr": 313.17,
@@ -5956,7 +6290,8 @@
     "net_income_ttm": 82.5,
     "operating_revenue_ttm": 1014.4,
     "roa_ttm": 0.94,
-    "roe_ttm": 3.33
+    "roe_ttm": 3.33,
+    "trust_share": 4.32
    },
    "2026Q2": {
     "total_liabilities": 6823.8,
@@ -5975,6 +6310,7 @@
     "operating_revenue": 230.7,
     "trust_fee": 89.8,
     "trust_account_loan": 8854.2,
+    "trust_assets": 259330.7,
     "allowance_tal": 660.0,
     "borrowings": 6500.0,
     "ncr": 286.15,
@@ -5991,7 +6327,8 @@
     "net_income_ttm": 84.4,
     "operating_revenue_ttm": 1033.2,
     "roa_ttm": 0.91,
-    "roe_ttm": 3.41
+    "roe_ttm": 3.41,
+    "trust_share": 4.36
    }
   }
  }
