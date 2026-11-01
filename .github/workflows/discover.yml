@@ -1,0 +1,31 @@
+name: FISIS 코드 탐색
+
+# 지표를 추가할 때 통계표·계정 코드를 찾기 위한 수동 실행용 워크플로.
+# 예) tables / accounts SM005 신탁계정대 / peek 0010902 SM005 202603
+on:
+  workflow_dispatch:
+    inputs:
+      args:
+        description: 'discover.py 인자'
+        required: true
+        default: 'tables'
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 탐색 실행
+        env:
+          FISIS_API_KEY: ${{ secrets.FISIS_API_KEY }}
+          ARGS: ${{ inputs.args }}
+        run: |
+          read -ra A <<< "$ARGS"
+          python scripts/discover.py "${A[@]}" | tee out.txt
+          { echo '```'; cat out.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
